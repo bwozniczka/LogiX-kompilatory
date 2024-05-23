@@ -33,16 +33,16 @@ import loadBeaver from './loadBeaver';
 
 console.log('👋 This message is being logged by "renderer.js", included via Vite');
 (async () => {
-    const beaver = await loadBeaver();
-    const textEditor = document.getElementById("logo-code");
+    const beaver = await loadBeaver(); // asynchroniczne wczytanie zdjęcia
+    const textEditor = document.getElementById("logo-code"); // Pobranie elementów z GUI
     const starterButton = document.getElementById("logo-executor");
     const canvas = document.getElementById("logo-main-screen");
 
-    const canvasCtx = canvas.getContext('2d');
+    const canvasCtx = canvas.getContext('2d'); //Pobranie kontekstu 2d
 
-    initiateBeaver(canvasCtx, beaver);
-    const visitor = new DrawVisitor(canvasCtx, beaver);
-    starterButton.addEventListener("click", () => {
+    initiateBeaver(canvasCtx, beaver); //Inicjacja bobra w pozycji zerowej
+    const visitor = new DrawVisitor(canvasCtx, beaver); //Stworzenie instancji customowego visitora
+    starterButton.addEventListener("click", () => { //Co ma się stać po zatwierdzeniu kodu
         parseLogo(textEditor.value, visitor);
     })
 })()
