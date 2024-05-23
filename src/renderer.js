@@ -26,24 +26,32 @@
  * ```
  */
 
-import './index.css';
-import { initiateBeaver, parseLogo } from './logoController';
-import { DrawVisitor } from './DrawVisitor';
-import loadBeaver from './loadBeaver';
+import "./index.css";
+import { initiateBeaver, parseLogo } from "./logoController";
+import { DrawVisitor } from "./DrawVisitor";
+import loadBeaver from "./loadBeaver";
+import { saveCanvasAsImage } from "./logoController";
 
-console.log('👋 This message is being logged by "renderer.js", included via Vite');
+console.log(
+  '👋 This message is being logged by "renderer.js", included via Vite'
+);
+
 (async () => {
-    const beaver = await loadBeaver(); // asynchroniczne wczytanie zdjęcia
-    const textEditor = document.getElementById("logo-code"); // Pobranie elementów z GUI
-    const starterButton = document.getElementById("logo-executor");
-    const canvas = document.getElementById("logo-main-screen");
+  const beaver = await loadBeaver(); // asynchroniczne wczytanie zdjęcia
+  const textEditor = document.getElementById("logo-code"); // Pobranie elementów z GUI
+  const starterButton = document.getElementById("logo-executor");
+  const canvas = document.getElementById("logo-main-screen");
+  const saveButton = document.getElementById("logo-save-img");
 
-    const canvasCtx = canvas.getContext('2d'); //Pobranie kontekstu 2d
+  const canvasCtx = canvas.getContext("2d"); //Pobranie kontekstu 2d
 
-    initiateBeaver(canvasCtx, beaver); //Inicjacja bobra w pozycji zerowej
-    const visitor = new DrawVisitor(canvasCtx, beaver); //Stworzenie instancji customowego visitora
-    starterButton.addEventListener("click", () => { //Co ma się stać po zatwierdzeniu kodu
-        parseLogo(textEditor.value, visitor);
-    })
-})()
-
+  initiateBeaver(canvasCtx, beaver); //Inicjacja bobra w pozycji zerowej
+  const visitor = new DrawVisitor(canvasCtx, beaver); //Stworzenie instancji customowego visitora
+  starterButton.addEventListener("click", () => {
+    //Co ma się stać po zatwierdzeniu kodu
+    parseLogo(textEditor.value, visitor);
+  });
+  saveButton.addEventListener("click", () => {
+    saveCanvasAsImage(canvas);
+  });
+})();
