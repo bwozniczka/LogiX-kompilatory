@@ -18,6 +18,8 @@ Interpreter do zmodyfikowanego logo z graficznym interfejsem w electronJS.
 |wy|Czyści obszar roboczy|
 |kwadrat :liczba|Rysuje kwadrat o zadanym boku|
 
+Poza tym mamy 10 testowych wiązanek zaimplementowanych metod gotowych do wklejenia oraz możliwość zapisania gotowego rysunku.
+
 ### Jak to wygląda?
 
 ![mock](views/mock.jpg)
@@ -29,6 +31,10 @@ npm i
 npm start
 ```
 
-Może być jeszcze potrzeba u
+W razie błędu, może być jeszcze potrzeba usunąć package-lock.json i node_modules aby zainstalować paczki ponownie.
 
 Dobrej zabawy :D
+
+#### Pozostałe informacje
+
+Wkrótce zostaną zaimplementowane pętle i warunki, także proszę nie tracić wiary.
