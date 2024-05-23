@@ -90,3 +90,6 @@ typings/
 
 # Electron-Forge
 out/
+
+./forge.env.d.ts
+

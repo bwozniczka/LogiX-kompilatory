@@ -30,14 +30,19 @@ import './index.css';
 import { initiateBeaver, loadInstructions, parseLogo } from './logoController';
 import { DrawVisitor } from './DrawVisitor';
 import loadBeaver from './loadBeaver';
+import { saveCanvasAsImage } from "./logoController";
 
-console.log('👋 This message is being logged by "renderer.js", included via Vite');
+console.log(
+    '👋 This message is being logged by "renderer.js", included via Vite'
+);
+
 (async () => {
     const beaver = await loadBeaver(); // asynchroniczne wczytanie zdjęcia
     const textEditor = document.getElementById("logo-code"); // Pobranie elementów z GUI
     const starterButton = document.getElementById("logo-executor");
     const canvas = document.getElementById("logo-main-screen");
     const select = document.getElementById("sample-codes");
+    const saveButton = document.getElementById("logo-save-img");
 
     const canvasCtx = canvas.getContext('2d'); //Pobranie kontekstu 2d
 
@@ -52,5 +57,8 @@ console.log('👋 This message is being logged by "renderer.js", included via Vi
             loadInstructions(e.target.value, textEditor)
         }
     })
-})()
 
+    saveButton.addEventListener("click", () => {
+        saveCanvasAsImage(canvas);
+    });
+})()
