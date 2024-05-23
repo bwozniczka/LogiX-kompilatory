@@ -4,97 +4,98 @@ import antlr4 from 'antlr4';
 import LogiXListener from './LogiXListener.js';
 import LogiXVisitor from './LogiXVisitor.js';
 
-const serializedATN = [4,1,48,291,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,
+const serializedATN = [4,1,49,297,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,
 4,2,5,7,5,2,6,7,6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,
 2,13,7,13,2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,
 20,7,20,2,21,7,21,2,22,7,22,2,23,7,23,2,24,7,24,2,25,7,25,2,26,7,26,2,27,
 7,27,2,28,7,28,2,29,7,29,2,30,7,30,2,31,7,31,2,32,7,32,2,33,7,33,2,34,7,
-34,2,35,7,35,2,36,7,36,2,37,7,37,1,0,3,0,78,8,0,1,0,4,0,81,8,0,11,0,12,0,
-82,1,0,3,0,86,8,0,1,0,1,0,1,1,4,1,91,8,1,11,1,12,1,92,1,1,3,1,96,8,1,1,1,
-1,1,1,1,3,1,101,8,1,1,1,3,1,104,8,1,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,
-1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,3,2,124,8,2,1,3,1,3,5,3,128,8,3,10,3,
-12,3,131,9,3,1,4,1,4,1,4,5,4,136,8,4,10,4,12,4,139,9,4,1,4,3,4,142,8,4,1,
-4,3,4,145,8,4,1,4,4,4,148,8,4,11,4,12,4,149,1,4,1,4,1,5,1,5,1,5,1,5,5,5,
-158,8,5,10,5,12,5,161,9,5,1,6,1,6,1,7,1,7,1,7,1,7,1,8,1,8,4,8,171,8,8,11,
-8,12,8,172,1,8,1,8,1,9,1,9,1,9,1,9,1,10,1,10,1,10,1,10,1,11,1,11,1,12,1,
-12,1,12,1,12,1,13,1,13,1,13,3,13,194,8,13,1,14,1,14,1,14,5,14,199,8,14,10,
-14,12,14,202,9,14,1,14,1,14,1,15,1,15,1,16,1,16,1,16,3,16,211,8,16,1,17,
-5,17,214,8,17,10,17,12,17,217,9,17,1,17,1,17,1,17,3,17,222,8,17,1,18,1,18,
-1,18,5,18,227,8,18,10,18,12,18,230,9,18,1,19,1,19,1,19,5,19,235,8,19,10,
-19,12,19,238,9,19,1,20,1,20,1,20,1,21,1,21,1,21,1,22,1,22,1,22,1,23,1,23,
-1,23,1,24,1,24,1,24,1,25,1,25,1,26,1,26,1,27,1,27,1,28,1,28,1,29,1,29,1,
-30,1,30,1,31,1,31,1,32,1,32,1,33,1,33,1,33,1,33,1,34,1,34,1,34,1,35,1,35,
-1,35,1,35,1,35,1,35,1,35,1,35,1,35,1,36,1,36,1,37,1,37,1,37,0,0,38,0,2,4,
-6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,
-56,58,60,62,64,66,68,70,72,74,0,13,1,0,10,12,1,0,8,8,1,0,15,16,1,0,17,18,
-1,0,19,20,1,0,21,22,1,0,23,24,1,0,25,26,1,0,27,29,1,0,30,31,1,0,32,33,1,
-0,34,35,1,0,36,37,295,0,80,1,0,0,0,2,103,1,0,0,0,4,123,1,0,0,0,6,125,1,0,
-0,0,8,132,1,0,0,0,10,153,1,0,0,0,12,162,1,0,0,0,14,164,1,0,0,0,16,168,1,
-0,0,0,18,176,1,0,0,0,20,180,1,0,0,0,22,184,1,0,0,0,24,186,1,0,0,0,26,190,
-1,0,0,0,28,195,1,0,0,0,30,205,1,0,0,0,32,210,1,0,0,0,34,215,1,0,0,0,36,223,
-1,0,0,0,38,231,1,0,0,0,40,239,1,0,0,0,42,242,1,0,0,0,44,245,1,0,0,0,46,248,
-1,0,0,0,48,251,1,0,0,0,50,254,1,0,0,0,52,256,1,0,0,0,54,258,1,0,0,0,56,260,
-1,0,0,0,58,262,1,0,0,0,60,264,1,0,0,0,62,266,1,0,0,0,64,268,1,0,0,0,66,270,
-1,0,0,0,68,274,1,0,0,0,70,277,1,0,0,0,72,286,1,0,0,0,74,288,1,0,0,0,76,78,
-3,2,1,0,77,76,1,0,0,0,77,78,1,0,0,0,78,79,1,0,0,0,79,81,5,47,0,0,80,77,1,
-0,0,0,81,82,1,0,0,0,82,80,1,0,0,0,82,83,1,0,0,0,83,85,1,0,0,0,84,86,3,2,
-1,0,85,84,1,0,0,0,85,86,1,0,0,0,86,87,1,0,0,0,87,88,5,0,0,1,88,1,1,0,0,0,
-89,91,3,4,2,0,90,89,1,0,0,0,91,92,1,0,0,0,92,90,1,0,0,0,92,93,1,0,0,0,93,
-95,1,0,0,0,94,96,3,74,37,0,95,94,1,0,0,0,95,96,1,0,0,0,96,104,1,0,0,0,97,
-104,3,74,37,0,98,100,3,26,13,0,99,101,3,74,37,0,100,99,1,0,0,0,100,101,1,
-0,0,0,101,104,1,0,0,0,102,104,3,8,4,0,103,90,1,0,0,0,103,97,1,0,0,0,103,
-98,1,0,0,0,103,102,1,0,0,0,104,3,1,0,0,0,105,124,3,14,7,0,106,124,3,42,21,
-0,107,124,3,44,22,0,108,124,3,46,23,0,109,124,3,48,24,0,110,124,3,50,25,
-0,111,124,3,52,26,0,112,124,3,54,27,0,113,124,3,56,28,0,114,124,3,58,29,
-0,115,124,3,60,30,0,116,124,3,64,32,0,117,124,3,66,33,0,118,124,3,24,12,
-0,119,124,3,6,3,0,120,124,3,18,9,0,121,124,3,62,31,0,122,124,3,70,35,0,123,
-105,1,0,0,0,123,106,1,0,0,0,123,107,1,0,0,0,123,108,1,0,0,0,123,109,1,0,
-0,0,123,110,1,0,0,0,123,111,1,0,0,0,123,112,1,0,0,0,123,113,1,0,0,0,123,
-114,1,0,0,0,123,115,1,0,0,0,123,116,1,0,0,0,123,117,1,0,0,0,123,118,1,0,
-0,0,123,119,1,0,0,0,123,120,1,0,0,0,123,121,1,0,0,0,123,122,1,0,0,0,124,
-5,1,0,0,0,125,129,3,30,15,0,126,128,3,38,19,0,127,126,1,0,0,0,128,131,1,
-0,0,0,129,127,1,0,0,0,129,130,1,0,0,0,130,7,1,0,0,0,131,129,1,0,0,0,132,
-133,5,1,0,0,133,137,3,30,15,0,134,136,3,10,5,0,135,134,1,0,0,0,136,139,1,
-0,0,0,137,135,1,0,0,0,137,138,1,0,0,0,138,141,1,0,0,0,139,137,1,0,0,0,140,
-142,5,47,0,0,141,140,1,0,0,0,141,142,1,0,0,0,142,147,1,0,0,0,143,145,3,2,
-1,0,144,143,1,0,0,0,144,145,1,0,0,0,145,146,1,0,0,0,146,148,5,47,0,0,147,
-144,1,0,0,0,148,149,1,0,0,0,149,147,1,0,0,0,149,150,1,0,0,0,150,151,1,0,
-0,0,151,152,5,2,0,0,152,9,1,0,0,0,153,154,5,3,0,0,154,159,3,30,15,0,155,
-156,5,4,0,0,156,158,3,10,5,0,157,155,1,0,0,0,158,161,1,0,0,0,159,157,1,0,
-0,0,159,160,1,0,0,0,160,11,1,0,0,0,161,159,1,0,0,0,162,163,5,5,0,0,163,13,
-1,0,0,0,164,165,5,6,0,0,165,166,3,72,36,0,166,167,3,16,8,0,167,15,1,0,0,
-0,168,170,5,7,0,0,169,171,3,4,2,0,170,169,1,0,0,0,171,172,1,0,0,0,172,170,
-1,0,0,0,172,173,1,0,0,0,173,174,1,0,0,0,174,175,5,8,0,0,175,17,1,0,0,0,176,
-177,5,9,0,0,177,178,3,20,10,0,178,179,3,16,8,0,179,19,1,0,0,0,180,181,3,
-38,19,0,181,182,3,22,11,0,182,183,3,38,19,0,183,21,1,0,0,0,184,185,7,0,0,
-0,185,23,1,0,0,0,186,187,5,13,0,0,187,188,5,43,0,0,188,189,3,32,16,0,189,
-25,1,0,0,0,190,193,5,14,0,0,191,194,3,32,16,0,192,194,3,28,14,0,193,191,
-1,0,0,0,193,192,1,0,0,0,194,27,1,0,0,0,195,200,5,7,0,0,196,199,3,28,14,0,
-197,199,8,1,0,0,198,196,1,0,0,0,198,197,1,0,0,0,199,202,1,0,0,0,200,198,
-1,0,0,0,200,201,1,0,0,0,201,203,1,0,0,0,202,200,1,0,0,0,203,204,5,8,0,0,
-204,29,1,0,0,0,205,206,5,44,0,0,206,31,1,0,0,0,207,211,5,43,0,0,208,211,
-3,38,19,0,209,211,3,40,20,0,210,207,1,0,0,0,210,208,1,0,0,0,210,209,1,0,
-0,0,211,33,1,0,0,0,212,214,7,2,0,0,213,212,1,0,0,0,214,217,1,0,0,0,215,213,
-1,0,0,0,215,216,1,0,0,0,216,221,1,0,0,0,217,215,1,0,0,0,218,222,3,72,36,
-0,219,222,3,40,20,0,220,222,3,12,6,0,221,218,1,0,0,0,221,219,1,0,0,0,221,
-220,1,0,0,0,222,35,1,0,0,0,223,228,3,34,17,0,224,225,7,3,0,0,225,227,3,34,
-17,0,226,224,1,0,0,0,227,230,1,0,0,0,228,226,1,0,0,0,228,229,1,0,0,0,229,
-37,1,0,0,0,230,228,1,0,0,0,231,236,3,36,18,0,232,233,7,2,0,0,233,235,3,36,
-18,0,234,232,1,0,0,0,235,238,1,0,0,0,236,234,1,0,0,0,236,237,1,0,0,0,237,
-39,1,0,0,0,238,236,1,0,0,0,239,240,5,3,0,0,240,241,3,30,15,0,241,41,1,0,
-0,0,242,243,7,4,0,0,243,244,3,38,19,0,244,43,1,0,0,0,245,246,7,5,0,0,246,
-247,3,38,19,0,247,45,1,0,0,0,248,249,7,6,0,0,249,250,3,38,19,0,250,47,1,
-0,0,0,251,252,7,7,0,0,252,253,3,38,19,0,253,49,1,0,0,0,254,255,7,8,0,0,255,
-51,1,0,0,0,256,257,7,9,0,0,257,53,1,0,0,0,258,259,7,10,0,0,259,55,1,0,0,
-0,260,261,7,11,0,0,261,57,1,0,0,0,262,263,7,12,0,0,263,59,1,0,0,0,264,265,
-5,38,0,0,265,61,1,0,0,0,266,267,5,39,0,0,267,63,1,0,0,0,268,269,5,40,0,0,
-269,65,1,0,0,0,270,271,5,41,0,0,271,272,3,38,19,0,272,273,3,38,19,0,273,
-67,1,0,0,0,274,275,5,5,0,0,275,276,3,38,19,0,276,69,1,0,0,0,277,278,5,42,
-0,0,278,279,5,7,0,0,279,280,3,30,15,0,280,281,3,38,19,0,281,282,3,38,19,
-0,282,283,3,38,19,0,283,284,5,8,0,0,284,285,3,16,8,0,285,71,1,0,0,0,286,
-287,5,45,0,0,287,73,1,0,0,0,288,289,5,46,0,0,289,75,1,0,0,0,23,77,82,85,
-92,95,100,103,123,129,137,141,144,149,159,172,193,198,200,210,215,221,228,
-236];
+34,2,35,7,35,2,36,7,36,2,37,7,37,2,38,7,38,1,0,3,0,80,8,0,1,0,4,0,83,8,0,
+11,0,12,0,84,1,0,3,0,88,8,0,1,0,1,0,1,1,4,1,93,8,1,11,1,12,1,94,1,1,3,1,
+98,8,1,1,1,1,1,1,1,3,1,103,8,1,1,1,3,1,106,8,1,1,2,1,2,1,2,1,2,1,2,1,2,1,
+2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,3,2,127,8,2,1,3,1,3,5,
+3,131,8,3,10,3,12,3,134,9,3,1,4,1,4,1,4,5,4,139,8,4,10,4,12,4,142,9,4,1,
+4,3,4,145,8,4,1,4,3,4,148,8,4,1,4,4,4,151,8,4,11,4,12,4,152,1,4,1,4,1,5,
+1,5,1,5,1,5,5,5,161,8,5,10,5,12,5,164,9,5,1,6,1,6,1,7,1,7,1,7,1,7,1,8,1,
+8,4,8,174,8,8,11,8,12,8,175,1,8,1,8,1,9,1,9,1,9,1,9,1,10,1,10,1,10,1,10,
+1,11,1,11,1,12,1,12,1,12,1,12,1,13,1,13,1,13,3,13,197,8,13,1,14,1,14,1,14,
+5,14,202,8,14,10,14,12,14,205,9,14,1,14,1,14,1,15,1,15,1,16,1,16,1,16,3,
+16,214,8,16,1,17,5,17,217,8,17,10,17,12,17,220,9,17,1,17,1,17,1,17,3,17,
+225,8,17,1,18,1,18,1,18,5,18,230,8,18,10,18,12,18,233,9,18,1,19,1,19,1,19,
+5,19,238,8,19,10,19,12,19,241,9,19,1,20,1,20,1,20,1,21,1,21,1,21,1,22,1,
+22,1,22,1,23,1,23,1,23,1,24,1,24,1,24,1,25,1,25,1,26,1,26,1,27,1,27,1,28,
+1,28,1,29,1,29,1,30,1,30,1,31,1,31,1,32,1,32,1,33,1,33,1,33,1,33,1,34,1,
+34,1,34,1,35,1,35,1,35,1,35,1,35,1,35,1,35,1,35,1,35,1,36,1,36,1,36,1,37,
+1,37,1,38,1,38,1,38,0,0,39,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,
+34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,0,13,1,
+0,10,12,1,0,8,8,1,0,15,16,1,0,17,18,1,0,19,20,1,0,21,22,1,0,23,24,1,0,25,
+26,1,0,27,29,1,0,30,31,1,0,32,33,1,0,34,35,1,0,36,37,301,0,82,1,0,0,0,2,
+105,1,0,0,0,4,126,1,0,0,0,6,128,1,0,0,0,8,135,1,0,0,0,10,156,1,0,0,0,12,
+165,1,0,0,0,14,167,1,0,0,0,16,171,1,0,0,0,18,179,1,0,0,0,20,183,1,0,0,0,
+22,187,1,0,0,0,24,189,1,0,0,0,26,193,1,0,0,0,28,198,1,0,0,0,30,208,1,0,0,
+0,32,213,1,0,0,0,34,218,1,0,0,0,36,226,1,0,0,0,38,234,1,0,0,0,40,242,1,0,
+0,0,42,245,1,0,0,0,44,248,1,0,0,0,46,251,1,0,0,0,48,254,1,0,0,0,50,257,1,
+0,0,0,52,259,1,0,0,0,54,261,1,0,0,0,56,263,1,0,0,0,58,265,1,0,0,0,60,267,
+1,0,0,0,62,269,1,0,0,0,64,271,1,0,0,0,66,273,1,0,0,0,68,277,1,0,0,0,70,280,
+1,0,0,0,72,289,1,0,0,0,74,292,1,0,0,0,76,294,1,0,0,0,78,80,3,2,1,0,79,78,
+1,0,0,0,79,80,1,0,0,0,80,81,1,0,0,0,81,83,5,48,0,0,82,79,1,0,0,0,83,84,1,
+0,0,0,84,82,1,0,0,0,84,85,1,0,0,0,85,87,1,0,0,0,86,88,3,2,1,0,87,86,1,0,
+0,0,87,88,1,0,0,0,88,89,1,0,0,0,89,90,5,0,0,1,90,1,1,0,0,0,91,93,3,4,2,0,
+92,91,1,0,0,0,93,94,1,0,0,0,94,92,1,0,0,0,94,95,1,0,0,0,95,97,1,0,0,0,96,
+98,3,76,38,0,97,96,1,0,0,0,97,98,1,0,0,0,98,106,1,0,0,0,99,106,3,76,38,0,
+100,102,3,26,13,0,101,103,3,76,38,0,102,101,1,0,0,0,102,103,1,0,0,0,103,
+106,1,0,0,0,104,106,3,8,4,0,105,92,1,0,0,0,105,99,1,0,0,0,105,100,1,0,0,
+0,105,104,1,0,0,0,106,3,1,0,0,0,107,127,3,14,7,0,108,127,3,42,21,0,109,127,
+3,44,22,0,110,127,3,46,23,0,111,127,3,48,24,0,112,127,3,50,25,0,113,127,
+3,52,26,0,114,127,3,54,27,0,115,127,3,56,28,0,116,127,3,58,29,0,117,127,
+3,60,30,0,118,127,3,64,32,0,119,127,3,66,33,0,120,127,3,24,12,0,121,127,
+3,6,3,0,122,127,3,18,9,0,123,127,3,62,31,0,124,127,3,70,35,0,125,127,3,72,
+36,0,126,107,1,0,0,0,126,108,1,0,0,0,126,109,1,0,0,0,126,110,1,0,0,0,126,
+111,1,0,0,0,126,112,1,0,0,0,126,113,1,0,0,0,126,114,1,0,0,0,126,115,1,0,
+0,0,126,116,1,0,0,0,126,117,1,0,0,0,126,118,1,0,0,0,126,119,1,0,0,0,126,
+120,1,0,0,0,126,121,1,0,0,0,126,122,1,0,0,0,126,123,1,0,0,0,126,124,1,0,
+0,0,126,125,1,0,0,0,127,5,1,0,0,0,128,132,3,30,15,0,129,131,3,38,19,0,130,
+129,1,0,0,0,131,134,1,0,0,0,132,130,1,0,0,0,132,133,1,0,0,0,133,7,1,0,0,
+0,134,132,1,0,0,0,135,136,5,1,0,0,136,140,3,30,15,0,137,139,3,10,5,0,138,
+137,1,0,0,0,139,142,1,0,0,0,140,138,1,0,0,0,140,141,1,0,0,0,141,144,1,0,
+0,0,142,140,1,0,0,0,143,145,5,48,0,0,144,143,1,0,0,0,144,145,1,0,0,0,145,
+150,1,0,0,0,146,148,3,2,1,0,147,146,1,0,0,0,147,148,1,0,0,0,148,149,1,0,
+0,0,149,151,5,48,0,0,150,147,1,0,0,0,151,152,1,0,0,0,152,150,1,0,0,0,152,
+153,1,0,0,0,153,154,1,0,0,0,154,155,5,2,0,0,155,9,1,0,0,0,156,157,5,3,0,
+0,157,162,3,30,15,0,158,159,5,4,0,0,159,161,3,10,5,0,160,158,1,0,0,0,161,
+164,1,0,0,0,162,160,1,0,0,0,162,163,1,0,0,0,163,11,1,0,0,0,164,162,1,0,0,
+0,165,166,5,5,0,0,166,13,1,0,0,0,167,168,5,6,0,0,168,169,3,74,37,0,169,170,
+3,16,8,0,170,15,1,0,0,0,171,173,5,7,0,0,172,174,3,4,2,0,173,172,1,0,0,0,
+174,175,1,0,0,0,175,173,1,0,0,0,175,176,1,0,0,0,176,177,1,0,0,0,177,178,
+5,8,0,0,178,17,1,0,0,0,179,180,5,9,0,0,180,181,3,20,10,0,181,182,3,16,8,
+0,182,19,1,0,0,0,183,184,3,38,19,0,184,185,3,22,11,0,185,186,3,38,19,0,186,
+21,1,0,0,0,187,188,7,0,0,0,188,23,1,0,0,0,189,190,5,13,0,0,190,191,5,44,
+0,0,191,192,3,32,16,0,192,25,1,0,0,0,193,196,5,14,0,0,194,197,3,32,16,0,
+195,197,3,28,14,0,196,194,1,0,0,0,196,195,1,0,0,0,197,27,1,0,0,0,198,203,
+5,7,0,0,199,202,3,28,14,0,200,202,8,1,0,0,201,199,1,0,0,0,201,200,1,0,0,
+0,202,205,1,0,0,0,203,201,1,0,0,0,203,204,1,0,0,0,204,206,1,0,0,0,205,203,
+1,0,0,0,206,207,5,8,0,0,207,29,1,0,0,0,208,209,5,45,0,0,209,31,1,0,0,0,210,
+214,5,44,0,0,211,214,3,38,19,0,212,214,3,40,20,0,213,210,1,0,0,0,213,211,
+1,0,0,0,213,212,1,0,0,0,214,33,1,0,0,0,215,217,7,2,0,0,216,215,1,0,0,0,217,
+220,1,0,0,0,218,216,1,0,0,0,218,219,1,0,0,0,219,224,1,0,0,0,220,218,1,0,
+0,0,221,225,3,74,37,0,222,225,3,40,20,0,223,225,3,12,6,0,224,221,1,0,0,0,
+224,222,1,0,0,0,224,223,1,0,0,0,225,35,1,0,0,0,226,231,3,34,17,0,227,228,
+7,3,0,0,228,230,3,34,17,0,229,227,1,0,0,0,230,233,1,0,0,0,231,229,1,0,0,
+0,231,232,1,0,0,0,232,37,1,0,0,0,233,231,1,0,0,0,234,239,3,36,18,0,235,236,
+7,2,0,0,236,238,3,36,18,0,237,235,1,0,0,0,238,241,1,0,0,0,239,237,1,0,0,
+0,239,240,1,0,0,0,240,39,1,0,0,0,241,239,1,0,0,0,242,243,5,3,0,0,243,244,
+3,30,15,0,244,41,1,0,0,0,245,246,7,4,0,0,246,247,3,38,19,0,247,43,1,0,0,
+0,248,249,7,5,0,0,249,250,3,38,19,0,250,45,1,0,0,0,251,252,7,6,0,0,252,253,
+3,38,19,0,253,47,1,0,0,0,254,255,7,7,0,0,255,256,3,38,19,0,256,49,1,0,0,
+0,257,258,7,8,0,0,258,51,1,0,0,0,259,260,7,9,0,0,260,53,1,0,0,0,261,262,
+7,10,0,0,262,55,1,0,0,0,263,264,7,11,0,0,264,57,1,0,0,0,265,266,7,12,0,0,
+266,59,1,0,0,0,267,268,5,38,0,0,268,61,1,0,0,0,269,270,5,39,0,0,270,63,1,
+0,0,0,271,272,5,40,0,0,272,65,1,0,0,0,273,274,5,41,0,0,274,275,3,38,19,0,
+275,276,3,38,19,0,276,67,1,0,0,0,277,278,5,5,0,0,278,279,3,38,19,0,279,69,
+1,0,0,0,280,281,5,42,0,0,281,282,5,7,0,0,282,283,3,30,15,0,283,284,3,38,
+19,0,284,285,3,38,19,0,285,286,3,38,19,0,286,287,5,8,0,0,287,288,3,16,8,
+0,288,71,1,0,0,0,289,290,5,43,0,0,290,291,3,38,19,0,291,73,1,0,0,0,292,293,
+5,46,0,0,293,75,1,0,0,0,294,295,5,47,0,0,295,77,1,0,0,0,23,79,84,87,94,97,
+102,105,126,132,140,144,147,152,162,175,196,201,203,213,218,224,231,239];
 
 
 const atn = new antlr4.atn.ATNDeserializer().deserialize(serializedATN);
@@ -114,13 +115,13 @@ export default class LogiXParser extends antlr4.Parser {
                             "'wyczysc'", "'wyczyscekran'", "'pb'", "'podniesbobra'", 
                             "'ob'", "'opuscbobra'", "'sb'", "'schowajbobra'", 
                             "'ub'", "'ukazbobra'", "'dom'", "'ubop'", "'napis'", 
-                            "'ustaw'", "'for'" ];
+                            "'ustaw'", "'for'", "'kwadrat'" ];
     static symbolicNames = [ null, null, null, null, null, null, null, null, 
                              null, null, null, null, null, null, null, null, 
                              null, null, null, null, null, null, null, null, 
                              null, null, null, null, null, null, null, null, 
                              null, null, null, null, null, null, null, null, 
-                             null, null, null, "LITERAL_WYRAZU", "LANCUCH", 
+                             null, null, null, null, "LITERAL_WYRAZU", "LANCUCH", 
                              "CYFRA", "KOMENTARZ", "EOL", "BIALY_ZNAK" ];
     static ruleNames = [ "prog", "linia", "polecenia", "wywolanieProcedury", 
                          "deklaracjaProcedury", "deklaracjeParametrow", 
@@ -129,7 +130,8 @@ export default class LogiXParser extends antlr4.Parser {
                          "nazwa", "wartosc", "wyrazenieZnaku", "wielokrotneWyrazenie", 
                          "wyrazenie", "odwolanie", "np", "ws", "pw", "lw", 
                          "wy", "pb", "ob", "sb", "ub", "dom", "ubop", "napis", 
-                         "ustaw", "losowo", "dla", "liczba", "komentarz" ];
+                         "ustaw", "losowo", "dla", "kwadrat", "liczba", 
+                         "komentarz" ];
 
     constructor(input) {
         super(input);
@@ -147,39 +149,39 @@ export default class LogiXParser extends antlr4.Parser {
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 80; 
+	        this.state = 82; 
 	        this._errHandler.sync(this);
 	        var _alt = 1;
 	        do {
 	        	switch (_alt) {
 	        	case 1:
-	        		this.state = 77;
+	        		this.state = 79;
 	        		this._errHandler.sync(this);
 	        		_la = this._input.LA(1);
-	        		if((((_la) & ~0x1f) === 0 && ((1 << _la) & 4294468162) !== 0) || ((((_la - 32)) & ~0x1f) === 0 && ((1 << (_la - 32)) & 22527) !== 0)) {
-	        		    this.state = 76;
+	        		if((((_la) & ~0x1f) === 0 && ((1 << _la) & 4294468162) !== 0) || ((((_la - 32)) & ~0x1f) === 0 && ((1 << (_la - 32)) & 45055) !== 0)) {
+	        		    this.state = 78;
 	        		    this.linia();
 	        		}
 
-	        		this.state = 79;
+	        		this.state = 81;
 	        		this.match(LogiXParser.EOL);
 	        		break;
 	        	default:
 	        		throw new antlr4.error.NoViableAltException(this);
 	        	}
-	        	this.state = 82; 
+	        	this.state = 84; 
 	        	this._errHandler.sync(this);
 	        	_alt = this._interp.adaptivePredict(this._input,1, this._ctx);
 	        } while ( _alt!=2 && _alt!=antlr4.atn.ATN.INVALID_ALT_NUMBER );
-	        this.state = 85;
+	        this.state = 87;
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
-	        if((((_la) & ~0x1f) === 0 && ((1 << _la) & 4294468162) !== 0) || ((((_la - 32)) & ~0x1f) === 0 && ((1 << (_la - 32)) & 22527) !== 0)) {
-	            this.state = 84;
+	        if((((_la) & ~0x1f) === 0 && ((1 << _la) & 4294468162) !== 0) || ((((_la - 32)) & ~0x1f) === 0 && ((1 << (_la - 32)) & 45055) !== 0)) {
+	            this.state = 86;
 	            this.linia();
 	        }
 
-	        this.state = 87;
+	        this.state = 89;
 	        this.match(LogiXParser.EOF);
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -202,7 +204,7 @@ export default class LogiXParser extends antlr4.Parser {
 	    this.enterRule(localctx, 2, LogiXParser.RULE_linia);
 	    var _la = 0;
 	    try {
-	        this.state = 103;
+	        this.state = 105;
 	        this._errHandler.sync(this);
 	        switch(this._input.LA(1)) {
 	        case 6:
@@ -232,48 +234,49 @@ export default class LogiXParser extends antlr4.Parser {
 	        case 40:
 	        case 41:
 	        case 42:
-	        case 44:
+	        case 43:
+	        case 45:
 	            this.enterOuterAlt(localctx, 1);
-	            this.state = 90; 
+	            this.state = 92; 
 	            this._errHandler.sync(this);
 	            _la = this._input.LA(1);
 	            do {
-	                this.state = 89;
+	                this.state = 91;
 	                this.polecenia();
-	                this.state = 92; 
+	                this.state = 94; 
 	                this._errHandler.sync(this);
 	                _la = this._input.LA(1);
-	            } while((((_la) & ~0x1f) === 0 && ((1 << _la) & 4294451776) !== 0) || ((((_la - 32)) & ~0x1f) === 0 && ((1 << (_la - 32)) & 6143) !== 0));
-	            this.state = 95;
+	            } while((((_la) & ~0x1f) === 0 && ((1 << _la) & 4294451776) !== 0) || ((((_la - 32)) & ~0x1f) === 0 && ((1 << (_la - 32)) & 12287) !== 0));
+	            this.state = 97;
 	            this._errHandler.sync(this);
 	            _la = this._input.LA(1);
-	            if(_la===46) {
-	                this.state = 94;
+	            if(_la===47) {
+	                this.state = 96;
 	                this.komentarz();
 	            }
 
 	            break;
-	        case 46:
+	        case 47:
 	            this.enterOuterAlt(localctx, 2);
-	            this.state = 97;
+	            this.state = 99;
 	            this.komentarz();
 	            break;
 	        case 14:
 	            this.enterOuterAlt(localctx, 3);
-	            this.state = 98;
-	            this.wypisz_();
 	            this.state = 100;
+	            this.wypisz_();
+	            this.state = 102;
 	            this._errHandler.sync(this);
 	            _la = this._input.LA(1);
-	            if(_la===46) {
-	                this.state = 99;
+	            if(_la===47) {
+	                this.state = 101;
 	                this.komentarz();
 	            }
 
 	            break;
 	        case 1:
 	            this.enterOuterAlt(localctx, 4);
-	            this.state = 102;
+	            this.state = 104;
 	            this.deklaracjaProcedury();
 	            break;
 	        default:
@@ -299,108 +302,113 @@ export default class LogiXParser extends antlr4.Parser {
 	    let localctx = new PoleceniaContext(this, this._ctx, this.state);
 	    this.enterRule(localctx, 4, LogiXParser.RULE_polecenia);
 	    try {
-	        this.state = 123;
+	        this.state = 126;
 	        this._errHandler.sync(this);
 	        switch(this._input.LA(1)) {
 	        case 6:
 	            this.enterOuterAlt(localctx, 1);
-	            this.state = 105;
+	            this.state = 107;
 	            this.powtorz();
 	            break;
 	        case 19:
 	        case 20:
 	            this.enterOuterAlt(localctx, 2);
-	            this.state = 106;
+	            this.state = 108;
 	            this.np();
 	            break;
 	        case 21:
 	        case 22:
 	            this.enterOuterAlt(localctx, 3);
-	            this.state = 107;
+	            this.state = 109;
 	            this.ws();
 	            break;
 	        case 23:
 	        case 24:
 	            this.enterOuterAlt(localctx, 4);
-	            this.state = 108;
+	            this.state = 110;
 	            this.pw();
 	            break;
 	        case 25:
 	        case 26:
 	            this.enterOuterAlt(localctx, 5);
-	            this.state = 109;
+	            this.state = 111;
 	            this.lw();
 	            break;
 	        case 27:
 	        case 28:
 	        case 29:
 	            this.enterOuterAlt(localctx, 6);
-	            this.state = 110;
+	            this.state = 112;
 	            this.wy();
 	            break;
 	        case 30:
 	        case 31:
 	            this.enterOuterAlt(localctx, 7);
-	            this.state = 111;
+	            this.state = 113;
 	            this.pb();
 	            break;
 	        case 32:
 	        case 33:
 	            this.enterOuterAlt(localctx, 8);
-	            this.state = 112;
+	            this.state = 114;
 	            this.ob();
 	            break;
 	        case 34:
 	        case 35:
 	            this.enterOuterAlt(localctx, 9);
-	            this.state = 113;
+	            this.state = 115;
 	            this.sb();
 	            break;
 	        case 36:
 	        case 37:
 	            this.enterOuterAlt(localctx, 10);
-	            this.state = 114;
+	            this.state = 116;
 	            this.ub();
 	            break;
 	        case 38:
 	            this.enterOuterAlt(localctx, 11);
-	            this.state = 115;
+	            this.state = 117;
 	            this.dom();
 	            break;
 	        case 40:
 	            this.enterOuterAlt(localctx, 12);
-	            this.state = 116;
+	            this.state = 118;
 	            this.napis();
 	            break;
 	        case 41:
 	            this.enterOuterAlt(localctx, 13);
-	            this.state = 117;
+	            this.state = 119;
 	            this.ustaw();
 	            break;
 	        case 13:
 	            this.enterOuterAlt(localctx, 14);
-	            this.state = 118;
+	            this.state = 120;
 	            this.zrob();
 	            break;
-	        case 44:
+	        case 45:
 	            this.enterOuterAlt(localctx, 15);
-	            this.state = 119;
+	            this.state = 121;
 	            this.wywolanieProcedury();
 	            break;
 	        case 9:
 	            this.enterOuterAlt(localctx, 16);
-	            this.state = 120;
+	            this.state = 122;
 	            this.jesli();
 	            break;
 	        case 39:
 	            this.enterOuterAlt(localctx, 17);
-	            this.state = 121;
+	            this.state = 123;
 	            this.ubop();
 	            break;
 	        case 42:
 	            this.enterOuterAlt(localctx, 18);
-	            this.state = 122;
+	            this.state = 124;
 	            this.dla();
+	            break;
+	        case 43:
+	            this.enterOuterAlt(localctx, 19);
+	            this.state = 125;
+	            this.kwadrat();
 	            break;
 	        default:
 	            throw new antlr4.error.NoViableAltException(this);
@@ -427,15 +435,15 @@ export default class LogiXParser extends antlr4.Parser {
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 125;
+	        this.state = 128;
 	        this.nazwa();
-	        this.state = 129;
+	        this.state = 132;
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
-	        while((((_la) & ~0x1f) === 0 && ((1 << _la) & 98344) !== 0) || _la===45) {
-	            this.state = 126;
+	        while((((_la) & ~0x1f) === 0 && ((1 << _la) & 98344) !== 0) || _la===46) {
+	            this.state = 129;
 	            this.wyrazenie();
-	            this.state = 131;
+	            this.state = 134;
 	            this._errHandler.sync(this);
 	            _la = this._input.LA(1);
 	        }
@@ -461,47 +469,47 @@ export default class LogiXParser extends antlr4.Parser {
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 132;
+	        this.state = 135;
 	        this.match(LogiXParser.T__0);
-	        this.state = 133;
+	        this.state = 136;
 	        this.nazwa();
-	        this.state = 137;
+	        this.state = 140;
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
 	        while(_la===3) {
-	            this.state = 134;
+	            this.state = 137;
 	            this.deklaracjeParametrow();
-	            this.state = 139;
+	            this.state = 142;
 	            this._errHandler.sync(this);
 	            _la = this._input.LA(1);
 	        }
-	        this.state = 141;
+	        this.state = 144;
 	        this._errHandler.sync(this);
 	        var la_ = this._interp.adaptivePredict(this._input,10,this._ctx);
 	        if(la_===1) {
-	            this.state = 140;
+	            this.state = 143;
 	            this.match(LogiXParser.EOL);
 
 	        }
-	        this.state = 147; 
+	        this.state = 150; 
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
 	        do {
-	            this.state = 144;
+	            this.state = 147;
 	            this._errHandler.sync(this);
 	            _la = this._input.LA(1);
-	            if((((_la) & ~0x1f) === 0 && ((1 << _la) & 4294468162) !== 0) || ((((_la - 32)) & ~0x1f) === 0 && ((1 << (_la - 32)) & 22527) !== 0)) {
-	                this.state = 143;
+	            if((((_la) & ~0x1f) === 0 && ((1 << _la) & 4294468162) !== 0) || ((((_la - 32)) & ~0x1f) === 0 && ((1 << (_la - 32)) & 45055) !== 0)) {
+	                this.state = 146;
 	                this.linia();
 	            }
 
-	            this.state = 146;
+	            this.state = 149;
 	            this.match(LogiXParser.EOL);
-	            this.state = 149; 
+	            this.state = 152; 
 	            this._errHandler.sync(this);
 	            _la = this._input.LA(1);
-	        } while((((_la) & ~0x1f) === 0 && ((1 << _la) & 4294468162) !== 0) || ((((_la - 32)) & ~0x1f) === 0 && ((1 << (_la - 32)) & 55295) !== 0));
-	        this.state = 151;
+	        } while((((_la) & ~0x1f) === 0 && ((1 << _la) & 4294468162) !== 0) || ((((_la - 32)) & ~0x1f) === 0 && ((1 << (_la - 32)) & 110591) !== 0));
+	        this.state = 154;
 	        this.match(LogiXParser.T__1);
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -524,21 +532,21 @@ export default class LogiXParser extends antlr4.Parser {
 	    this.enterRule(localctx, 10, LogiXParser.RULE_deklaracjeParametrow);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 153;
+	        this.state = 156;
 	        this.match(LogiXParser.T__2);
-	        this.state = 154;
+	        this.state = 157;
 	        this.nazwa();
-	        this.state = 159;
+	        this.state = 162;
 	        this._errHandler.sync(this);
 	        var _alt = this._interp.adaptivePredict(this._input,13,this._ctx)
 	        while(_alt!=2 && _alt!=antlr4.atn.ATN.INVALID_ALT_NUMBER) {
 	            if(_alt===1) {
-	                this.state = 155;
+	                this.state = 158;
 	                this.match(LogiXParser.T__3);
-	                this.state = 156;
+	                this.state = 159;
 	                this.deklaracjeParametrow(); 
 	            }
-	            this.state = 161;
+	            this.state = 164;
 	            this._errHandler.sync(this);
 	            _alt = this._interp.adaptivePredict(this._input,13,this._ctx);
 	        }
@@ -564,7 +572,7 @@ export default class LogiXParser extends antlr4.Parser {
 	    this.enterRule(localctx, 12, LogiXParser.RULE_func_);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 162;
+	        this.state = 165;
 	        this.match(LogiXParser.T__4);
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -587,11 +595,11 @@ export default class LogiXParser extends antlr4.Parser {
 	    this.enterRule(localctx, 14, LogiXParser.RULE_powtorz);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 164;
+	        this.state = 167;
 	        this.match(LogiXParser.T__5);
-	        this.state = 165;
+	        this.state = 168;
 	        this.liczba();
-	        this.state = 166;
+	        this.state = 169;
 	        this.blok();
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -615,19 +623,19 @@ export default class LogiXParser extends antlr4.Parser {
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 168;
+	        this.state = 171;
 	        this.match(LogiXParser.T__6);
-	        this.state = 170; 
+	        this.state = 173; 
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
 	        do {
-	            this.state = 169;
+	            this.state = 172;
 	            this.polecenia();
-	            this.state = 172; 
+	            this.state = 175; 
 	            this._errHandler.sync(this);
 	            _la = this._input.LA(1);
-	        } while((((_la) & ~0x1f) === 0 && ((1 << _la) & 4294451776) !== 0) || ((((_la - 32)) & ~0x1f) === 0 && ((1 << (_la - 32)) & 6143) !== 0));
-	        this.state = 174;
+	        } while((((_la) & ~0x1f) === 0 && ((1 << _la) & 4294451776) !== 0) || ((((_la - 32)) & ~0x1f) === 0 && ((1 << (_la - 32)) & 12287) !== 0));
+	        this.state = 177;
 	        this.match(LogiXParser.T__7);
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -650,11 +658,11 @@ export default class LogiXParser extends antlr4.Parser {
 	    this.enterRule(localctx, 18, LogiXParser.RULE_jesli);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 176;
+	        this.state = 179;
 	        this.match(LogiXParser.T__8);
-	        this.state = 177;
+	        this.state = 180;
 	        this.porownanie();
-	        this.state = 178;
+	        this.state = 181;
 	        this.blok();
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -677,11 +685,11 @@ export default class LogiXParser extends antlr4.Parser {
 	    this.enterRule(localctx, 20, LogiXParser.RULE_porownanie);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 180;
+	        this.state = 183;
 	        this.wyrazenie();
-	        this.state = 181;
+	        this.state = 184;
 	        this.operatorPorownania();
-	        this.state = 182;
+	        this.state = 185;
 	        this.wyrazenie();
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -705,7 +713,7 @@ export default class LogiXParser extends antlr4.Parser {
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 184;
+	        this.state = 187;
 	        _la = this._input.LA(1);
 	        if(!((((_la) & ~0x1f) === 0 && ((1 << _la) & 7168) !== 0))) {
 	        this._errHandler.recoverInline(this);
@@ -735,11 +743,11 @@ export default class LogiXParser extends antlr4.Parser {
 	    this.enterRule(localctx, 24, LogiXParser.RULE_zrob);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 186;
+	        this.state = 189;
 	        this.match(LogiXParser.T__12);
-	        this.state = 187;
+	        this.state = 190;
 	        this.match(LogiXParser.LITERAL_WYRAZU);
-	        this.state = 188;
+	        this.state = 191;
 	        this.wartosc();
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -762,22 +770,22 @@ export default class LogiXParser extends antlr4.Parser {
 	    this.enterRule(localctx, 26, LogiXParser.RULE_wypisz_);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 190;
-	        this.match(LogiXParser.T__13);
 	        this.state = 193;
+	        this.match(LogiXParser.T__13);
+	        this.state = 196;
 	        this._errHandler.sync(this);
 	        switch(this._input.LA(1)) {
 	        case 3:
 	        case 5:
 	        case 15:
 	        case 16:
-	        case 43:
-	        case 45:
-	            this.state = 191;
+	        case 44:
+	        case 46:
+	            this.state = 194;
 	            this.wartosc();
 	            break;
 	        case 7:
-	            this.state = 192;
+	            this.state = 195;
 	            this.lancuchZnakowy();
 	            break;
 	        default:
@@ -805,23 +813,23 @@ export default class LogiXParser extends antlr4.Parser {
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 195;
+	        this.state = 198;
 	        this.match(LogiXParser.T__6);
-	        this.state = 200;
+	        this.state = 203;
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
-	        while((((_la) & ~0x1f) === 0 && ((1 << _la) & 4294967038) !== 0) || ((((_la - 32)) & ~0x1f) === 0 && ((1 << (_la - 32)) & 131071) !== 0)) {
-	            this.state = 198;
+	        while((((_la) & ~0x1f) === 0 && ((1 << _la) & 4294967038) !== 0) || ((((_la - 32)) & ~0x1f) === 0 && ((1 << (_la - 32)) & 262143) !== 0)) {
+	            this.state = 201;
 	            this._errHandler.sync(this);
 	            var la_ = this._interp.adaptivePredict(this._input,16,this._ctx);
 	            switch(la_) {
 	            case 1:
-	                this.state = 196;
+	                this.state = 199;
 	                this.lancuchZnakowy();
 	                break;
 
 	            case 2:
-	                this.state = 197;
+	                this.state = 200;
 	                _la = this._input.LA(1);
 	                if(_la<=0 || _la===8) {
 	                this._errHandler.recoverInline(this);
@@ -833,11 +841,11 @@ export default class LogiXParser extends antlr4.Parser {
 	                break;
 
 	            }
-	            this.state = 202;
+	            this.state = 205;
 	            this._errHandler.sync(this);
 	            _la = this._input.LA(1);
 	        }
-	        this.state = 203;
+	        this.state = 206;
 	        this.match(LogiXParser.T__7);
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -860,7 +868,7 @@ export default class LogiXParser extends antlr4.Parser {
 	    this.enterRule(localctx, 30, LogiXParser.RULE_nazwa);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 205;
+	        this.state = 208;
 	        this.match(LogiXParser.LANCUCH);
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -882,25 +890,25 @@ export default class LogiXParser extends antlr4.Parser {
 	    let localctx = new WartoscContext(this, this._ctx, this.state);
 	    this.enterRule(localctx, 32, LogiXParser.RULE_wartosc);
 	    try {
-	        this.state = 210;
+	        this.state = 213;
 	        this._errHandler.sync(this);
 	        var la_ = this._interp.adaptivePredict(this._input,18,this._ctx);
 	        switch(la_) {
 	        case 1:
 	            this.enterOuterAlt(localctx, 1);
-	            this.state = 207;
+	            this.state = 210;
 	            this.match(LogiXParser.LITERAL_WYRAZU);
 	            break;
 
 	        case 2:
 	            this.enterOuterAlt(localctx, 2);
-	            this.state = 208;
+	            this.state = 211;
 	            this.wyrazenie();
 	            break;
 
 	        case 3:
 	            this.enterOuterAlt(localctx, 3);
-	            this.state = 209;
+	            this.state = 212;
 	            this.odwolanie();
 	            break;
 
@@ -927,11 +935,11 @@ export default class LogiXParser extends antlr4.Parser {
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 215;
+	        this.state = 218;
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
 	        while(_la===15 || _la===16) {
-	            this.state = 212;
+	            this.state = 215;
 	            _la = this._input.LA(1);
 	            if(!(_la===15 || _la===16)) {
 	            this._errHandler.recoverInline(this);
@@ -940,23 +948,23 @@ export default class LogiXParser extends antlr4.Parser {
 	            	this._errHandler.reportMatch(this);
 	                this.consume();
 	            }
-	            this.state = 217;
+	            this.state = 220;
 	            this._errHandler.sync(this);
 	            _la = this._input.LA(1);
 	        }
-	        this.state = 221;
+	        this.state = 224;
 	        this._errHandler.sync(this);
 	        switch(this._input.LA(1)) {
-	        case 45:
-	            this.state = 218;
+	        case 46:
+	            this.state = 221;
 	            this.liczba();
 	            break;
 	        case 3:
-	            this.state = 219;
+	            this.state = 222;
 	            this.odwolanie();
 	            break;
 	        case 5:
-	            this.state = 220;
+	            this.state = 223;
 	            this.func_();
 	            break;
 	        default:
@@ -984,13 +992,13 @@ export default class LogiXParser extends antlr4.Parser {
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 223;
+	        this.state = 226;
 	        this.wyrazenieZnaku();
-	        this.state = 228;
+	        this.state = 231;
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
 	        while(_la===17 || _la===18) {
-	            this.state = 224;
+	            this.state = 227;
 	            _la = this._input.LA(1);
 	            if(!(_la===17 || _la===18)) {
 	            this._errHandler.recoverInline(this);
@@ -999,9 +1007,9 @@ export default class LogiXParser extends antlr4.Parser {
 	            	this._errHandler.reportMatch(this);
 	                this.consume();
 	            }
-	            this.state = 225;
+	            this.state = 228;
 	            this.wyrazenieZnaku();
-	            this.state = 230;
+	            this.state = 233;
 	            this._errHandler.sync(this);
 	            _la = this._input.LA(1);
 	        }
@@ -1027,14 +1035,14 @@ export default class LogiXParser extends antlr4.Parser {
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 231;
+	        this.state = 234;
 	        this.wielokrotneWyrazenie();
-	        this.state = 236;
+	        this.state = 239;
 	        this._errHandler.sync(this);
 	        var _alt = this._interp.adaptivePredict(this._input,22,this._ctx)
 	        while(_alt!=2 && _alt!=antlr4.atn.ATN.INVALID_ALT_NUMBER) {
 	            if(_alt===1) {
-	                this.state = 232;
+	                this.state = 235;
 	                _la = this._input.LA(1);
 	                if(!(_la===15 || _la===16)) {
 	                this._errHandler.recoverInline(this);
@@ -1043,10 +1051,10 @@ export default class LogiXParser extends antlr4.Parser {
 	                	this._errHandler.reportMatch(this);
 	                    this.consume();
 	                }
-	                this.state = 233;
+	                this.state = 236;
 	                this.wielokrotneWyrazenie(); 
 	            }
-	            this.state = 238;
+	            this.state = 241;
 	            this._errHandler.sync(this);
 	            _alt = this._interp.adaptivePredict(this._input,22,this._ctx);
 	        }
@@ -1072,9 +1080,9 @@ export default class LogiXParser extends antlr4.Parser {
 	    this.enterRule(localctx, 40, LogiXParser.RULE_odwolanie);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 239;
+	        this.state = 242;
 	        this.match(LogiXParser.T__2);
-	        this.state = 240;
+	        this.state = 243;
 	        this.nazwa();
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -1098,42 +1106,9 @@ export default class LogiXParser extends antlr4.Parser {
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 242;
-	        _la = this._input.LA(1);
-	        if(!(_la===19 || _la===20)) {
-	        this._errHandler.recoverInline(this);
-	        }
-	        else {
-	        	this._errHandler.reportMatch(this);
-	            this.consume();
-	        }
-	        this.state = 243;
-	        this.wyrazenie();
-	    } catch (re) {
-	    	if(re instanceof antlr4.error.RecognitionException) {
-		        localctx.exception = re;
-		        this._errHandler.reportError(this, re);
-		        this._errHandler.recover(this, re);
-		    } else {
-		    	throw re;
-		    }
-	    } finally {
-	        this.exitRule();
-	    }
-	    return localctx;
-	}
-
-
-
-	ws() {
-	    let localctx = new WsContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 44, LogiXParser.RULE_ws);
-	    var _la = 0;
-	    try {
-	        this.enterOuterAlt(localctx, 1);
 	        this.state = 245;
 	        _la = this._input.LA(1);
-	        if(!(_la===21 || _la===22)) {
+	        if(!(_la===19 || _la===20)) {
 	        this._errHandler.recoverInline(this);
 	        }
 	        else {
@@ -1158,15 +1133,15 @@ export default class LogiXParser extends antlr4.Parser {
 
 
 
-	pw() {
-	    let localctx = new PwContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 46, LogiXParser.RULE_pw);
+	ws() {
+	    let localctx = new WsContext(this, this._ctx, this.state);
+	    this.enterRule(localctx, 44, LogiXParser.RULE_ws);
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
 	        this.state = 248;
 	        _la = this._input.LA(1);
-	        if(!(_la===23 || _la===24)) {
+	        if(!(_la===21 || _la===22)) {
 	        this._errHandler.recoverInline(this);
 	        }
 	        else {
@@ -1191,15 +1166,15 @@ export default class LogiXParser extends antlr4.Parser {
 
 
 
-	lw() {
-	    let localctx = new LwContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 48, LogiXParser.RULE_lw);
+	pw() {
+	    let localctx = new PwContext(this, this._ctx, this.state);
+	    this.enterRule(localctx, 46, LogiXParser.RULE_pw);
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
 	        this.state = 251;
 	        _la = this._input.LA(1);
-	        if(!(_la===25 || _la===26)) {
+	        if(!(_la===23 || _la===24)) {
 	        this._errHandler.recoverInline(this);
 	        }
 	        else {
@@ -1224,13 +1199,46 @@ export default class LogiXParser extends antlr4.Parser {
 
 
 
+	lw() {
+	    let localctx = new LwContext(this, this._ctx, this.state);
+	    this.enterRule(localctx, 48, LogiXParser.RULE_lw);
+	    var _la = 0;
+	    try {
+	        this.enterOuterAlt(localctx, 1);
+	        this.state = 254;
+	        _la = this._input.LA(1);
+	        if(!(_la===25 || _la===26)) {
+	        this._errHandler.recoverInline(this);
+	        }
+	        else {
+	        	this._errHandler.reportMatch(this);
+	            this.consume();
+	        }
+	        this.state = 255;
+	        this.wyrazenie();
+	    } catch (re) {
+	    	if(re instanceof antlr4.error.RecognitionException) {
+		        localctx.exception = re;
+		        this._errHandler.reportError(this, re);
+		        this._errHandler.recover(this, re);
+		    } else {
+		    	throw re;
+		    }
+	    } finally {
+	        this.exitRule();
+	    }
+	    return localctx;
+	}
+
+
+
 	wy() {
 	    let localctx = new WyContext(this, this._ctx, this.state);
 	    this.enterRule(localctx, 50, LogiXParser.RULE_wy);
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 254;
+	        this.state = 257;
 	        _la = this._input.LA(1);
 	        if(!((((_la) & ~0x1f) === 0 && ((1 << _la) & 939524096) !== 0))) {
 	        this._errHandler.recoverInline(this);
@@ -1261,7 +1269,7 @@ export default class LogiXParser extends antlr4.Parser {
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 256;
+	        this.state = 259;
 	        _la = this._input.LA(1);
 	        if(!(_la===30 || _la===31)) {
 	        this._errHandler.recoverInline(this);
@@ -1292,7 +1300,7 @@ export default class LogiXParser extends antlr4.Parser {
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 258;
+	        this.state = 261;
 	        _la = this._input.LA(1);
 	        if(!(_la===32 || _la===33)) {
 	        this._errHandler.recoverInline(this);
@@ -1323,7 +1331,7 @@ export default class LogiXParser extends antlr4.Parser {
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 260;
+	        this.state = 263;
 	        _la = this._input.LA(1);
 	        if(!(_la===34 || _la===35)) {
 	        this._errHandler.recoverInline(this);
@@ -1354,7 +1362,7 @@ export default class LogiXParser extends antlr4.Parser {
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 262;
+	        this.state = 265;
 	        _la = this._input.LA(1);
 	        if(!(_la===36 || _la===37)) {
 	        this._errHandler.recoverInline(this);
@@ -1384,7 +1392,7 @@ export default class LogiXParser extends antlr4.Parser {
 	    this.enterRule(localctx, 60, LogiXParser.RULE_dom);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 264;
+	        this.state = 267;
 	        this.match(LogiXParser.T__37);
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -1407,7 +1415,7 @@ export default class LogiXParser extends antlr4.Parser {
 	    this.enterRule(localctx, 62, LogiXParser.RULE_ubop);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 266;
+	        this.state = 269;
 	        this.match(LogiXParser.T__38);
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -1430,7 +1438,7 @@ export default class LogiXParser extends antlr4.Parser {
 	    this.enterRule(localctx, 64, LogiXParser.RULE_napis);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 268;
+	        this.state = 271;
 	        this.match(LogiXParser.T__39);
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -1453,11 +1461,11 @@ export default class LogiXParser extends antlr4.Parser {
 	    this.enterRule(localctx, 66, LogiXParser.RULE_ustaw);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 270;
+	        this.state = 273;
 	        this.match(LogiXParser.T__40);
-	        this.state = 271;
+	        this.state = 274;
 	        this.wyrazenie();
-	        this.state = 272;
+	        this.state = 275;
 	        this.wyrazenie();
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -1480,9 +1488,9 @@ export default class LogiXParser extends antlr4.Parser {
 	    this.enterRule(localctx, 68, LogiXParser.RULE_losowo);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 274;
+	        this.state = 277;
 	        this.match(LogiXParser.T__4);
-	        this.state = 275;
+	        this.state = 278;
 	        this.wyrazenie();
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -1505,22 +1513,47 @@ export default class LogiXParser extends antlr4.Parser {
 	    this.enterRule(localctx, 70, LogiXParser.RULE_dla);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 277;
-	        this.match(LogiXParser.T__41);
-	        this.state = 278;
-	        this.match(LogiXParser.T__6);
-	        this.state = 279;
-	        this.nazwa();
 	        this.state = 280;
-	        this.wyrazenie();
+	        this.match(LogiXParser.T__41);
 	        this.state = 281;
-	        this.wyrazenie();
+	        this.match(LogiXParser.T__6);
 	        this.state = 282;
-	        this.wyrazenie();
+	        this.nazwa();
 	        this.state = 283;
-	        this.match(LogiXParser.T__7);
+	        this.wyrazenie();
 	        this.state = 284;
+	        this.wyrazenie();
+	        this.state = 285;
+	        this.wyrazenie();
+	        this.state = 286;
+	        this.match(LogiXParser.T__7);
+	        this.state = 287;
 	        this.blok();
+	    } catch (re) {
+	    	if(re instanceof antlr4.error.RecognitionException) {
+		        localctx.exception = re;
+		        this._errHandler.reportError(this, re);
+		        this._errHandler.recover(this, re);
+		    } else {
+		    	throw re;
+		    }
+	    } finally {
+	        this.exitRule();
+	    }
+	    return localctx;
+	}
+
+
+
+	kwadrat() {
+	    let localctx = new KwadratContext(this, this._ctx, this.state);
+	    this.enterRule(localctx, 72, LogiXParser.RULE_kwadrat);
+	    try {
+	        this.enterOuterAlt(localctx, 1);
+	        this.state = 289;
+	        this.match(LogiXParser.T__42);
+	        this.state = 290;
+	        this.wyrazenie();
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
 		        localctx.exception = re;
@@ -1539,10 +1572,10 @@ export default class LogiXParser extends antlr4.Parser {
 
 	liczba() {
 	    let localctx = new LiczbaContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 72, LogiXParser.RULE_liczba);
+	    this.enterRule(localctx, 74, LogiXParser.RULE_liczba);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 286;
+	        this.state = 292;
 	        this.match(LogiXParser.CYFRA);
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -1562,10 +1595,10 @@ export default class LogiXParser extends antlr4.Parser {
 
 	komentarz() {
 	    let localctx = new KomentarzContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 74, LogiXParser.RULE_komentarz);
+	    this.enterRule(localctx, 76, LogiXParser.RULE_komentarz);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 288;
+	        this.state = 294;
 	        this.match(LogiXParser.KOMENTARZ);
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -1627,12 +1660,13 @@ LogiXParser.T__38 = 39;
 LogiXParser.T__39 = 40;
 LogiXParser.T__40 = 41;
 LogiXParser.T__41 = 42;
-LogiXParser.LITERAL_WYRAZU = 43;
-LogiXParser.LANCUCH = 44;
-LogiXParser.CYFRA = 45;
-LogiXParser.KOMENTARZ = 46;
-LogiXParser.EOL = 47;
-LogiXParser.BIALY_ZNAK = 48;
+LogiXParser.T__42 = 43;
+LogiXParser.LITERAL_WYRAZU = 44;
+LogiXParser.LANCUCH = 45;
+LogiXParser.CYFRA = 46;
+LogiXParser.KOMENTARZ = 47;
+LogiXParser.EOL = 48;
+LogiXParser.BIALY_ZNAK = 49;
 
 LogiXParser.RULE_prog = 0;
 LogiXParser.RULE_linia = 1;
@@ -1670,8 +1704,9 @@ LogiXParser.RULE_napis = 32;
 LogiXParser.RULE_ustaw = 33;
 LogiXParser.RULE_losowo = 34;
 LogiXParser.RULE_dla = 35;
-LogiXParser.RULE_liczba = 36;
-LogiXParser.RULE_komentarz = 37;
+LogiXParser.RULE_kwadrat = 36;
+LogiXParser.RULE_liczba = 37;
+LogiXParser.RULE_komentarz = 38;
 
 class ProgContext extends antlr4.ParserRuleContext {
 
@@ -1885,6 +1920,10 @@ class PoleceniaContext extends antlr4.ParserRuleContext {
 
 	dla() {
 	    return this.getTypedRuleContext(DlaContext,0);
+	};
+
+	kwadrat() {
+	    return this.getTypedRuleContext(KwadratContext,0);
 	};
 
 	enterRule(listener) {
@@ -3450,6 +3489,49 @@ class DlaContext extends antlr4.ParserRuleContext {
 
 
 
+class KwadratContext extends antlr4.ParserRuleContext {
+
+    constructor(parser, parent, invokingState) {
+        if(parent===undefined) {
+            parent = null;
+        }
+        if(invokingState===undefined || invokingState===null) {
+            invokingState = -1;
+        }
+        super(parent, invokingState);
+        this.parser = parser;
+        this.ruleIndex = LogiXParser.RULE_kwadrat;
+    }
+
+	wyrazenie() {
+	    return this.getTypedRuleContext(WyrazenieContext,0);
+	};
+
+	enterRule(listener) {
+	    if(listener instanceof LogiXListener ) {
+	        listener.enterKwadrat(this);
+		}
+	}
+
+	exitRule(listener) {
+	    if(listener instanceof LogiXListener ) {
+	        listener.exitKwadrat(this);
+		}
+	}
+
+	accept(visitor) {
+	    if ( visitor instanceof LogiXVisitor ) {
+	        return visitor.visitKwadrat(this);
+	    } else {
+	        return visitor.visitChildren(this);
+	    }
+	}
+
+
+}
+
+
+
 class LiczbaContext extends antlr4.ParserRuleContext {
 
     constructor(parser, parent, invokingState) {
@@ -3573,5 +3655,6 @@ LogiXParser.NapisContext = NapisContext;
 LogiXParser.UstawContext = UstawContext; 
 LogiXParser.LosowoContext = LosowoContext; 
 LogiXParser.DlaContext = DlaContext; 
+LogiXParser.KwadratContext = KwadratContext; 
 LogiXParser.LiczbaContext = LiczbaContext; 
 LogiXParser.KomentarzContext = KomentarzContext; 

@@ -27,7 +27,7 @@
  */
 
 import './index.css';
-import { initiateBeaver, parseLogo } from './logoController';
+import { initiateBeaver, loadInstructions, parseLogo } from './logoController';
 import { DrawVisitor } from './DrawVisitor';
 import loadBeaver from './loadBeaver';
 
@@ -37,6 +37,7 @@ console.log('👋 This message is being logged by "renderer.js", included via Vi
     const textEditor = document.getElementById("logo-code"); // Pobranie elementów z GUI
     const starterButton = document.getElementById("logo-executor");
     const canvas = document.getElementById("logo-main-screen");
+    const select = document.getElementById("sample-codes");
 
     const canvasCtx = canvas.getContext('2d'); //Pobranie kontekstu 2d
 
@@ -44,6 +45,12 @@ console.log('👋 This message is being logged by "renderer.js", included via Vi
     const visitor = new DrawVisitor(canvasCtx, beaver); //Stworzenie instancji customowego visitora
     starterButton.addEventListener("click", () => { //Co ma się stać po zatwierdzeniu kodu
         parseLogo(textEditor.value, visitor);
+    })
+
+    select.addEventListener("change", (e) => {
+        if (e.target.value != "") {
+            loadInstructions(e.target.value, textEditor)
+        }
     })
 })()
 

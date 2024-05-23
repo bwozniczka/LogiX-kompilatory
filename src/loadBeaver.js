@@ -1,4 +1,4 @@
-import beaver from './images/beaver-icon.jpg';
+import beaver from './images/bober.png';
 
 const loadBeaver = () => {
     return new Promise((resolve, reject) => {

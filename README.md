@@ -17,4 +17,6 @@ npm i
 npm start
 ```
 
+Może być jeszcze potrzeba u
+
 Dobrej zabawy :D

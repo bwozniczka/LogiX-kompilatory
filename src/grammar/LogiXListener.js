@@ -329,6 +329,15 @@ export default class LogiXListener extends antlr4.tree.ParseTreeListener {
 	}
 
 
+	// Enter a parse tree produced by LogiXParser#kwadrat.
+	enterKwadrat(ctx) {
+	}
+
+	// Exit a parse tree produced by LogiXParser#kwadrat.
+	exitKwadrat(ctx) {
+	}
+
+
 	// Enter a parse tree produced by LogiXParser#liczba.
 	enterLiczba(ctx) {
 	}

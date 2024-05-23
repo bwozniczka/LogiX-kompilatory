@@ -85,10 +85,10 @@ body {
 
 .tooth-one {
   left: calc(50% - 50px);
-  transform: rotate(15deg);
+  transform: rotate(10deg);
 }
 
 .tooth-two {
   left: calc(50% + 10px);
-  transform: rotate(-15deg);
+  transform: rotate(-10deg);
 }

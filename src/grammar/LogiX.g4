@@ -26,7 +26,8 @@ polecenia:
 	| wywolanieProcedury
 	| jesli //?
 	| ubop //?
-	| dla; //?
+	| dla //?
+	| kwadrat; //tworzy kwadrat o podanym boku
 
 wywolanieProcedury: nazwa wyrazenie*;
 
@@ -96,6 +97,8 @@ ustaw: 'ustaw' wyrazenie wyrazenie;
 losowo: 'losowo' wyrazenie;
 
 dla: 'for' '[' nazwa wyrazenie wyrazenie wyrazenie ']' blok;
+
+kwadrat: 'kwadrat' wyrazenie;
 
 liczba: CYFRA;
 

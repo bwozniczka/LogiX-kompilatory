@@ -222,6 +222,12 @@ export default class LogiXVisitor extends antlr4.tree.ParseTreeVisitor {
 	}
 
 
+	// Visit a parse tree produced by LogiXParser#kwadrat.
+	visitKwadrat(ctx) {
+	  return this.visitChildren(ctx);
+	}
+
+
 	// Visit a parse tree produced by LogiXParser#liczba.
 	visitLiczba(ctx) {
 	  return this.visitChildren(ctx);

@@ -1,0 +1,12 @@
+{
+    "test1": "np 100\npw 90\nnp 100\npw 90\nnp 100\npw 90\nnp 100\npw 90",
+    "test2": "pw 30\npb\nws 50\nob\nnp 100\npw 120\nnp 100\npw 120\nnp 100\npw 120",
+    "test3": "lw 90\npb\nnp 100\nob\npw 120\nnp 100\npw 60\nnp 100\npw 60\nnp 100\npw 60\nnp 100\npw 60\nnp 100\npw 60\nnp 100\npw 60",
+    "test4": "np 100\npw 90\nnp 50\npw 110\ndom\nlw 90\nnp 100\ndom",
+    "test5": "pb\nws 100\nob\nlw 90\nnp 100\npw 75\nnp 150",
+    "test6": "np 100\nlw 120\nnp 50\npb\ndom\nnp 100\npw 120\nob\nnp 50\ndom",
+    "test7": "np 100 pw 90 np 100 pw 90 np 250 lw 90 np 100 dom",
+    "test8": "lw 90 np 100 pw 100 np 200",
+    "test9": "pb ws 50 pw 90 ws 25 ob np 50 lw 90 np 100 lw 90 np 50 lw 90 np 50 lw 90 np 50 dom",
+    "test10": "pb ws 100 lw 90 ob np 100 pw 90 np 200 pw 90 np 200 pw 90 np 200 pw 90 np 100 pb ws 75 pw 90 ob np 100 lw 90 np 50 lw 90 np 100 pb dom lw 90 np 80 pw 90 np 80 ob kwadrat 80 pb ws 80 pw 90 np 40 lw 90 ob np 80 pb ws 40 lw 90 ws 40 ob np 80 dom pb lw 90 np 100 pw 90 np 100 pw 60 ws 30 ob np 145 pw 60 np 145 dom"
+}
