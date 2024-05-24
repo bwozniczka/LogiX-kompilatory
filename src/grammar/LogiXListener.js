@@ -338,6 +338,24 @@ export default class LogiXListener extends antlr4.tree.ParseTreeListener {
 	}
 
 
+	// Enter a parse tree produced by LogiXParser#trojkat.
+	enterTrojkat(ctx) {
+	}
+
+	// Exit a parse tree produced by LogiXParser#trojkat.
+	exitTrojkat(ctx) {
+	}
+
+
+	// Enter a parse tree produced by LogiXParser#kolo.
+	enterKolo(ctx) {
+	}
+
+	// Exit a parse tree produced by LogiXParser#kolo.
+	exitKolo(ctx) {
+	}
+
+
 	// Enter a parse tree produced by LogiXParser#liczba.
 	enterLiczba(ctx) {
 	}

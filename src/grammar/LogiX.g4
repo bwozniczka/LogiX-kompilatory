@@ -27,7 +27,9 @@ polecenia:
 	| jesli //?
 	| ubop //?
 	| dla //?
-	| kwadrat; //tworzy kwadrat o podanym boku
+	| kwadrat //tworzy kwadrat o podanym boku
+	| trojkat //tworzy trojkat rownoboczny o podanym boku
+	| kolo; //tworzy kolo o podanym promieniu
 
 wywolanieProcedury: nazwa wyrazenie*;
 
@@ -99,6 +101,10 @@ losowo: 'losowo' wyrazenie;
 dla: 'for' '[' nazwa wyrazenie wyrazenie wyrazenie ']' blok;
 
 kwadrat: 'kwadrat' wyrazenie;
+
+trojkat: 'trojkat' wyrazenie;
+
+kolo: 'kolo' wyrazenie;
 
 liczba: CYFRA;
 
