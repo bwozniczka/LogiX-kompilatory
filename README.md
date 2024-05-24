@@ -17,6 +17,8 @@ Interpreter do zmodyfikowanego logo z graficznym interfejsem w electronJS.
 |ub|Pozwala pokazać znacznik|
 |wy|Czyści obszar roboczy|
 |kwadrat :liczba|Rysuje kwadrat o zadanym boku|
+|trojkat :liczba|Rysuje trójkąt równoboczny o zadanym boku|
+|kolo :liczba|Rysuje koło o zadanym promieniu|
 
 Poza tym mamy 10 testowych wiązanek zaimplementowanych metod gotowych do wklejenia oraz możliwość zapisania gotowego rysunku.
 
