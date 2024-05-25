@@ -245,7 +245,6 @@ export class DrawVisitor extends LogiXVisitor {
       this.beaverHidden
     );
   }
-
   visitKolo(ctx) {
     let promien = parseInt(ctx.wyrazenie(0).getText());
     this.clear();
@@ -262,7 +261,53 @@ export class DrawVisitor extends LogiXVisitor {
       this.beaverHidden
     );
   }
+
+  visitUstaw(ctx) {
+    let x = parseInt(ctx.wyrazenie(0).getText());
+    let y = parseInt(ctx.wyrazenie(1).getText());
+    this.clear();
+    this.restoreContext("ustaw");
+    this.context.beginPath();
+
+    this.context.stroke();
+    this.saveContext("ustaw");
+    moveBeaver(
+      this.beaver,
+      this.context,
+      this.currentX,
+      this.currentY,
+      this.currentDegree,
+      this.beaverHidden
+    );
+  }
+  visitUstaw(ctx) {
+    let x = parseInt(ctx.wyrazenie(0).getText());
+    let y = parseInt(ctx.wyrazenie(1).getText());
+
+    x += this.context.canvas.width / 2;
+    y += this.context.canvas.height / 2;
+
+    this.context.clearRect(
+      0,
+      0,
+      this.context.canvas.width,
+      this.context.canvas.height
+    );
+    this.currentX = x;
+    this.currentY = y;
+    this.context.stroke();
+    this.saveContext("ustaw");
+    moveBeaver(
+      this.beaver,
+      this.context,
+      this.currentX,
+      this.currentY,
+      this.currentDegree,
+      this.beaverHidden
+    );
+  }
 }
+
 const degreesToRadians = (d) => {
   return d * (Math.PI / 180);
 };
