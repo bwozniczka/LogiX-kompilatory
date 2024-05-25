@@ -19,6 +19,7 @@ Interpreter do zmodyfikowanego logo z graficznym interfejsem w electronJS.
 |kwadrat :liczba|Rysuje kwadrat o zadanym boku|
 |trojkat :liczba|Rysuje trójkąt równoboczny o zadanym boku|
 |kolo :liczba|Rysuje koło o zadanym promieniu|
+|ustaw :liczba :liczba| Ustawia znacznik na zadanych współrzędnych (X,Y)
 
 Poza tym mamy 10 testowych wiązanek zaimplementowanych metod gotowych do wklejenia oraz możliwość zapisania gotowego rysunku.
 
