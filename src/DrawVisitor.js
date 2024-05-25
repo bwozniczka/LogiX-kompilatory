@@ -261,25 +261,6 @@ export class DrawVisitor extends LogiXVisitor {
       this.beaverHidden
     );
   }
-
-  visitUstaw(ctx) {
-    let x = parseInt(ctx.wyrazenie(0).getText());
-    let y = parseInt(ctx.wyrazenie(1).getText());
-    this.clear();
-    this.restoreContext("ustaw");
-    this.context.beginPath();
-
-    this.context.stroke();
-    this.saveContext("ustaw");
-    moveBeaver(
-      this.beaver,
-      this.context,
-      this.currentX,
-      this.currentY,
-      this.currentDegree,
-      this.beaverHidden
-    );
-  }
   visitUstaw(ctx) {
     let x = parseInt(ctx.wyrazenie(0).getText());
     let y = parseInt(ctx.wyrazenie(1).getText());
