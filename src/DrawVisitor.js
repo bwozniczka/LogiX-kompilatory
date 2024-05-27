@@ -30,7 +30,7 @@ export class DrawVisitor extends LogiXVisitor {
   restoreContext(cmd) {
     this.context.restore();
     this.saveRestoreHistory.push({ p: cmd, o: "restore" });
-    console.log(this.saveRestoreHistory);
+    //console.log(this.saveRestoreHistory);
   }
 
   clear() {
@@ -286,6 +286,15 @@ export class DrawVisitor extends LogiXVisitor {
       this.currentDegree,
       this.beaverHidden
     );
+  }
+
+  visitPowtorz(ctx) {
+    let count = parseInt(ctx.liczba(0).getText());
+    let blok = ctx.blok(0).polecenia()
+    console.log(count, blok)
+    for (let i = 0; i < count; i++) {
+      this.visit(blok)
+    }
   }
 }
 

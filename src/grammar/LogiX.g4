@@ -25,7 +25,7 @@ polecenia:
 	| zrob //?
 	| wywolanieProcedury
 	| jesli //?
-	| ubop //?
+	| ubop //? do wyrzucenia
 	| dla //?
 	| kwadrat //tworzy kwadrat o podanym boku
 	| trojkat //tworzy trojkat rownoboczny o podanym boku
