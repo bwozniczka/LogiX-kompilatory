@@ -92,7 +92,7 @@ dom: 'dom';
 
 ubop: 'ubop';
 
-napis: 'napis';
+napis: 'napis' LITERAL_WYRAZU;
 
 ustaw: 'ustaw' wyrazenie wyrazenie;
 
@@ -110,7 +110,7 @@ liczba: CYFRA;
 
 komentarz: KOMENTARZ;
 
-LITERAL_WYRAZU: '"' LANCUCH;
+LITERAL_WYRAZU: '"' .*? '"';
 
 LANCUCH: [a-zA-Z] [a-zA-Z0-9_]*;
 

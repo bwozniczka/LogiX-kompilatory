@@ -288,12 +288,18 @@ export class DrawVisitor extends LogiXVisitor {
     );
   }
 
+  visitNapis(ctx) {
+    let napis = ctx.LITERAL_WYRAZU().getText().replace(/"/g, "");
+    this.context.font = "25px Arial";
+    this.context.fillText(napis, this.currentX, this.currentY);
+    this.context.save();
+  }
+
   visitPowtorz(ctx) {
     let count = parseInt(ctx.liczba(0).getText());
-    let blok = ctx.blok(0).polecenia()
-    console.log(count, blok)
+    let blok = ctx.blok(0).polecenia();
     for (let i = 0; i < count; i++) {
-      this.visit(blok)
+      this.visit(blok);
     }
   }
 }
