@@ -22,7 +22,7 @@ polecenia:
 	| dom // cofnij do punktu 0 0
 	| napis
 	| ustaw // ustaw pozycję x y
-	| zrob //?
+	| zrob //? 
 	| wywolanieProcedury
 	| jesli //?
 	| ubop //? do wyrzucenia

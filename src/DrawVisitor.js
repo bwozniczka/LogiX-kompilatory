@@ -1,6 +1,16 @@
 import LogiXVisitor from "./grammar/LogiXVisitor";
 import { moveBeaver } from "./logoController";
 
+class ProceduresDict {
+  constructor() {
+    this.dict = {};
+  }
+
+  add(key, value) {
+    this.dict[key] = value;
+  }
+}
+
 export class DrawVisitor extends LogiXVisitor {
   constructor(context, beaver) {
     super();
@@ -20,6 +30,7 @@ export class DrawVisitor extends LogiXVisitor {
     this.beaverHidden = false;
     this.saveRestoreHistory = [];
     this.saveContext("constructor");
+    this.procedures = new ProceduresDict();
   }
 
   saveContext(cmd) {
@@ -301,6 +312,19 @@ export class DrawVisitor extends LogiXVisitor {
     for (let i = 0; i < count; i++) {
       this.visit(blok);
     }
+  }
+
+  visitDeklaracjaProcedury(ctx) {
+    console.log(ctx);
+    let nazwa = ctx.nazwa().getText();
+    let polecenia = ctx.linia(0).polecenia();
+    this.procedures.add(nazwa, polecenia);
+  }
+
+  visitWywolanieProcedury(ctx) {
+    let nazwa = ctx.nazwa().getText();
+    let polecenia = this.procedures.dict[nazwa];
+    this.visit(polecenia);
   }
 }
 
