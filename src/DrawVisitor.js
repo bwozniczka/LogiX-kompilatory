@@ -263,7 +263,7 @@ export class DrawVisitor extends LogiXVisitor {
   }
   visitUstaw(ctx) {
     let x = parseInt(ctx.wyrazenie(0).getText());
-    let y = parseInt(ctx.wyrazenie(1).getText());
+    let y = -parseInt(ctx.wyrazenie(1).getText());
 
     x += this.context.canvas.width / 2;
     y += this.context.canvas.height / 2;
