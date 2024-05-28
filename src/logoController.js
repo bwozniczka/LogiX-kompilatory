@@ -5,8 +5,6 @@ import antlr4 from "antlr4";
 import testCodes from "./assets/test_codes.json";
 
 export const initiateBeaver = (logoScreen, beaver) => {
-  logoScreen.canvas.width = 400;
-  logoScreen.canvas.height = 400;
   logoScreen.save();
   logoScreen.translate(
     logoScreen.canvas.width / 2,

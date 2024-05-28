@@ -53,6 +53,7 @@ export class DrawVisitor extends LogiXVisitor {
     this.beaverHidden = false;
     this.context.save();
     this.procedures = new ProceduresDict();
+    console.log(document.getElementById("clear-canvas"))
     document.getElementById("clear-code").addEventListener("click", () => {
       document.getElementById("logo-code").value = "";
     });

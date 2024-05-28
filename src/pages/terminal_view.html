@@ -14,15 +14,18 @@
     </header>
     <main class="main-box">
         <div class="output-panel">
-            <canvas class="logo-canvas" id="logo-main-screen"></canvas>
-            <button class="logo-save" id="logo-save-img">Zapisz obrazek</button>
+            <canvas class="logo-canvas" id="logo-main-screen-2" width="1000" height="400"></canvas>
+            <button class="logo-exec" id="logo-save-img">Zapisz obrazek</button>
         </div>
         <div class="history" id="history">
 
         </div>
         <div class="input-panel">
-            <input type="text" name="" id="logo-input" />
-            <input type="submit" id="logo-submit" class="logo-save" value="Rusz bobrem" />
+            <form id="terminal-logo">
+                <input type="text" name="" id="logo-input" />
+                <input type="submit" id="logo-submit" class="logo-run" value="Rusz bobrem" />
+            </form>
+            <button class="logo-exec" id="clear-canvas">Wyczyść ślad</button>
         </div>
 
     </main>
