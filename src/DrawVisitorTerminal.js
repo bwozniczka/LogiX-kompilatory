@@ -9,16 +9,16 @@ class ProceduresDict {
 
     add(key, value, params) {
         this.dict[key] = { procedure: value, params: params };
-        let opt = document.createElement('option');
-        opt.value = key;
-        opt.innerText = key + "(" + params.join(", ") + ")";
-        console.log(this.select.options);
-        for (let i = 0; i < this.select.options.length; i++) {
-            if (this.select.options[i].value == key) {
-                this.select.options[i].remove();
-            }
-        }
-        this.select.appendChild(opt);
+        // let opt = document.createElement('option');
+        // opt.value = key;
+        // opt.innerText = key + "(" + params.join(", ") + ")";
+        // console.log(this.select.options);
+        // for (let i = 0; i < this.select.options.length; i++) {
+        //     if (this.select.options[i].value == key) {
+        //         this.select.options[i].remove();
+        //     }
+        // }
+        // this.select.appendChild(opt);
     }
 
     updateCache(name, values) {
