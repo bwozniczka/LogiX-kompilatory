@@ -143,3 +143,55 @@ a:hover,
 a:active {
   color: inherit;
 }
+
+table {
+  width: 75%;
+  text-align: center;
+  border-collapse: collapse;
+  margin: auto;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+th {
+  text-align: left;
+  padding: 16px;
+}
+td {
+  text-align: left;
+  padding: 16px;
+  background-color: #e4c59e;
+}
+
+th {
+  background-color: #af8260;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.logo-tutorial {
+  margin-top: 10px;
+  color: #e4c59e;
+  background-color: #803d3b;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.logo-exit {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #e4c59e;
+  background-color: #803d3b;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}

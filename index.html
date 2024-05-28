@@ -1,50 +1,52 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>LogiX</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <title>LogiX</title>
-</head>
-
-<body>
-  <header class="top-bar">
-    <h1>LogiX</h1>
-    <p>Taka logomocja, tylko że z bobrem 🦫</p>
-  </header>
-  <main class="main-box">
-    <div class="input-panel">
-      <select class="custom-select" name="" id="sample-codes">
-        <option value="">Wybierz testowy plik</option>
-        <option value="test1">test1 - kwadrat</option>
-        <option value="test2">test2 - trójkąt</option>
-        <option value="test3">test3 - sześciokąt</option>
-        <option value="test4">test4</option>
-        <option value="test5">test5</option>
-        <option value="test6">test6</option>
-        <option value="test7">test7</option>
-        <option value="test8">test8 - kwiatuszek</option>
-        <option value="test9">test9 - 9</option>
-        <option value="test10">test10 - dom</option>
-      </select>
-      <textarea name="" id="logo-code" cols="50" rows="23"></textarea>
-      <button class="logo-exec" id="logo-executor">Rusz bobrem</button>
-    </div>
-    <div class="output-panel">
-      <canvas class="logo-canvas" id="logo-main-screen"></canvas>
-      <button class="logo-save" id="logo-save-img">Zapisz obrazek</button>
-    </div>
-  </main>
-  <div class="tooth tooth-one"></div>
-  <div class="tooth tooth-two"></div>
-  <script type="module" src="/src/renderer.js"></script>
-  <footer>
-    <p>
-      Jeśli chcesz zobaczyć kod źródłowy kilknij tutaj:
-      <a class="custom-link" href="https://github.com/bwozniczka/LogiX-kompilatory">
-        LogiX
-      </a>
-    </p>
-  </footer>
-</body>
-
+  <body>
+    <header class="top-bar">
+      <h1>LogiX</h1>
+      <p>Taka logomocja, tylko że z bobrem 🦫</p>
+      <button class="logo-tutorial" id="logo-tut">Zobacz spis komend!</button>
+    </header>
+    <main class="main-box">
+      <div class="input-panel">
+        <select class="custom-select" name="" id="sample-codes">
+          <option value="">Wybierz testowy plik</option>
+          <option value="test1">test1 - kwadrat</option>
+          <option value="test2">test2 - trójkąt</option>
+          <option value="test3">test3 - sześciokąt</option>
+          <option value="test4">test4</option>
+          <option value="test5">test5</option>
+          <option value="test6">test6</option>
+          <option value="test7">test7</option>
+          <option value="test8">test8 - kwiatuszek</option>
+          <option value="test9">test9 - 9</option>
+          <option value="test10">test10 - dom</option>
+        </select>
+        <textarea name="" id="logo-code" cols="50" rows="23"></textarea>
+        <button class="logo-exec" id="logo-executor">Rusz bobrem</button>
+      </div>
+      <div class="output-panel">
+        <canvas class="logo-canvas" id="logo-main-screen"></canvas>
+        <button class="logo-save" id="logo-save-img">Zapisz obrazek</button>
+      </div>
+    </main>
+    <div class="tooth tooth-one"></div>
+    <div class="tooth tooth-two"></div>
+    <script type="module" src="/src/renderer.js"></script>
+    <footer>
+      <p>
+        Jeśli chcesz zobaczyć kod źródłowy kilknij tutaj:
+        <a
+          class="custom-link"
+          href="https://github.com/bwozniczka/LogiX-kompilatory"
+        >
+          LogiX
+        </a>
+      </p>
+    </footer>
+  </body>
 </html>
