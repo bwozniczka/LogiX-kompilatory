@@ -4,19 +4,20 @@ import { moveBeaver } from "./logoController";
 class ProceduresDict {
   constructor() {
     this.dict = {};
-    this.paramsCache = {}
+    this.paramsCache = {};
     this.select = document.getElementById("user-procedures");
     this.select.addEventListener("change", (e) => {
       if (e.target.value != "") {
-        let proc = this.dict[e.target.value]
-        document.getElementById("logo-code").value = proc.procedure[0].start.getInputStream().strdata;
+        let proc = this.dict[e.target.value];
+        document.getElementById("logo-code").value =
+          proc.procedure[0].start.getInputStream().strdata;
       }
-    })
+    });
   }
 
   add(key, value, params) {
     this.dict[key] = { procedure: value, params: params };
-    let opt = document.createElement('option');
+    let opt = document.createElement("option");
     opt.value = key;
     opt.innerText = key + "(" + params.join(", ") + ")";
     console.log(this.select.options);
@@ -29,10 +30,10 @@ class ProceduresDict {
   }
 
   updateCache(name, values) {
-    this.paramsCache = {}
+    this.paramsCache = {};
     this.dict[name].params.forEach((p, index) => {
       this.paramsCache[p] = values[index];
-    })
+    });
   }
 
   getCachedParam(name) {
@@ -52,8 +53,12 @@ export class DrawVisitor extends LogiXVisitor {
     this.beaverHidden = false;
     this.context.save();
     this.procedures = new ProceduresDict();
+    document.getElementById("clear-code").addEventListener("click", () => {
+      document.getElementById("logo-code").value = "";
+    });
     document.getElementById("clear-canvas").addEventListener("click", () => {
-      this.context.reset();
+      this.clear();
+      this.context.save();
       this.currentX = context.canvas.width / 2;
       this.currentY = context.canvas.height / 2;
       this.currentDegree = 270;
@@ -66,16 +71,18 @@ export class DrawVisitor extends LogiXVisitor {
         this.currentDegree,
         this.beaverHidden
       );
-    })
+    });
   }
 
   getParam(ctx) {
     let paramText = ctx.getText();
     if (paramText[0] == ":") {
       let text = paramText.substring(1);
-      Object.keys(this.procedures.paramsCache).sort((a, b) => (b.length - a.length)).forEach(param => {
-        text = text.replace(param, this.procedures.getCachedParam(param));
-      })
+      Object.keys(this.procedures.paramsCache)
+        .sort((a, b) => b.length - a.length)
+        .forEach((param) => {
+          text = text.replace(param, this.procedures.getCachedParam(param));
+        });
       return eval(text);
     } else {
       try {
@@ -136,7 +143,7 @@ export class DrawVisitor extends LogiXVisitor {
   }
 
   visitPw(ctx) {
-    let deg = this.getParam(ctx.wyrazenie(0)) //Pobranie danych z polecenia
+    let deg = this.getParam(ctx.wyrazenie(0)); //Pobranie danych z polecenia
     this.currentDegree = (this.currentDegree + deg) % 360; //Update aktualnego kąta
     this.clear();
     this.context.restore();
@@ -365,19 +372,45 @@ export class DrawVisitor extends LogiXVisitor {
   }
 
   visitDeklaracjaProcedury(ctx) {
-    console.log(ctx);
     let nazwa = ctx.nazwa().getText();
     let polecenia = ctx.linia();
-    let params = ctx.deklaracjeParametrow().map(el => (el.nazwa().getText()))
+    let params = ctx.deklaracjeParametrow().map((el) => el.nazwa().getText());
     this.procedures.add(nazwa, polecenia, params);
   }
 
   visitWywolanieProcedury(ctx) {
     let nazwa = ctx.nazwa().getText();
     let polecenia = this.procedures.dict[nazwa].procedure;
-    let args = ctx.wyrazenie().map(el => parseInt(el.getText()))
+    let args = ctx.wyrazenie().map((el) => parseInt(el.getText()));
     this.procedures.updateCache(nazwa, args);
     this.visit(polecenia);
+  }
+
+  visitJesli(ctx) {
+    let porownanie = this.visit(ctx.porownanie());
+    let blok = ctx.blok(0).polecenia();
+    console.log(porownanie, blok);
+    if (porownanie) {
+      this.visit(blok);
+    }
+  }
+  visitPorownanie(ctx) {
+    let left = this.getParam(ctx.wyrazenie()[0]);
+    let operator = ctx.operatorPorownania().getText();
+    let right = this.getParam(ctx.wyrazenie()[1]);
+
+    switch (operator) {
+      case "<":
+        return left < right;
+      case ">":
+        return left > right;
+      case "=":
+        return left == right;
+      case "<=":
+        return left <= right;
+      case ">=":
+        return left >= right;
+    }
   }
 }
 
