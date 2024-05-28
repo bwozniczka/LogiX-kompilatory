@@ -12,8 +12,6 @@ body {
 .logo-canvas {
     margin-top: 80px;
     border: 1px solid black;
-    width: 1000px;
-    height: 400px;
 }
 
 .top-bar {
@@ -45,10 +43,16 @@ body {
 
 .input-panel {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 10px;
-    width: calc(100% - 40px);
+    width: calc(100% - 200px);
     padding: 0 20px;
+}
+
+.input-panel>form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
 #logo-input {
@@ -57,6 +61,13 @@ body {
 
 .history {
     height: 100px;
+    width: calc(100% - 220px);
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    color: white;
+    overflow-y: scroll;
 }
 
 .output-panel {
@@ -83,8 +94,7 @@ body {
     background-color: #814644;
 }
 
-.logo-save {
-    margin-top: 10px;
+.logo-run {
     color: #e4c59e;
     background-color: #803d3b;
     padding: 5px;
@@ -93,7 +103,7 @@ body {
     font-size: 1rem;
 }
 
-.logo-save:hover {
+.logo-run:hover {
     background-color: #814644;
 }
 

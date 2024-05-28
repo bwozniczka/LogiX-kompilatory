@@ -28,41 +28,46 @@
 
 import "./terminal.css";
 import { initiateBeaver, loadInstructions, parseLogo } from "./logoController";
-import { DrawVisitor } from "./DrawVisitor";
+import { DrawVisitorTerminal } from "./DrawVisitorTerminal";
 import loadBeaver from "./loadBeaver";
 import { saveCanvasAsImage } from "./logoController";
 
 console.log(
-    '👋 This message is being logged by "renderer.js", included via Vite'
+    '👋 This message is being logged by "tutorial_renderer.js", included via Vite'
 );
 
 (async () => {
     const beaver = await loadBeaver(); // asynchroniczne wczytanie zdjęcia
     const textEditor = document.getElementById("logo-code"); // Pobranie elementów z GUI
-    const starterButton = document.getElementById("logo-executor");
-    const canvas = document.getElementById("logo-main-screen");
-    const select = document.getElementById("sample-codes");
+    const runButton = document.getElementById("logo-executor");
+    const terminalForm = document.getElementById("terminal-logo")
+    const canvas = document.getElementById("logo-main-screen-2");
     const saveButton = document.getElementById("logo-save-img");
     const tutorialButton = document.getElementById("logo-tut");
+    const historyDiv = document.getElementById("history");
+    console.log(canvas);
     const canvasCtx = canvas.getContext("2d"); //Pobranie kontekstu 2d
     initiateBeaver(canvasCtx, beaver); //Inicjacja bobra w pozycji zerowej
-    const visitor = new DrawVisitor(canvasCtx, beaver); //Stworzenie instancji customowego visitora
-    starterButton.addEventListener("click", () => {
-        //Co ma się stać po zatwierdzeniu kodu
-        parseLogo(textEditor.value, visitor);
-    });
+    const visitor = new DrawVisitorTerminal(canvasCtx, beaver); //Stworzenie instancji customowego visitora
+    // runButton.addEventListener("click", () => {
+    //     //Co ma się stać po zatwierdzeniu kodu
+    //     parseLogo(textEditor.value, visitor);
+    // });
 
-    select.addEventListener("change", (e) => {
-        if (e.target.value != "") {
-            loadInstructions(e.target.value, textEditor);
-        }
-    });
+    terminalForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let command = document.getElementById("logo-input").value
+        parseLogo(command, visitor);
+        historyDiv.innerText += (command + "\n")
+        historyDiv.scrollTop = historyDiv.scrollHeight
+        document.getElementById("logo-input").value = "";
+    })
 
     saveButton.addEventListener("click", () => {
         saveCanvasAsImage(canvas);
     });
 
     tutorialButton.addEventListener("click", () => {
-        window.location.href = "/src/pages/tutorial.html";
+        window.location.href = "tutorial.html";
     });
 })();
