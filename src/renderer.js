@@ -47,6 +47,7 @@ console.log(
     const canvasCtx = canvas.getContext("2d"); //Pobranie kontekstu 2d
     initiateBeaver(canvasCtx, beaver); //Inicjacja bobra w pozycji zerowej
     const visitor = new DrawVisitor(canvasCtx, beaver); //Stworzenie instancji customowego visitora
+    
     starterButton.addEventListener("click", () => {
         //Co ma się stać po zatwierdzeniu kodu
         parseLogo(textEditor.value, visitor);
@@ -55,6 +56,12 @@ console.log(
     document.getElementById("clear-code").addEventListener("click", () => {
         textEditor.value = "";
     })
+
+    textEditor.addEventListener('keydown', function(event) {
+        if (event.shiftKey && event.key === 'Enter') {
+            event.preventDefault();
+            parseLogo(textEditor.value, visitor);
+        }});
 
     select.addEventListener("change", (e) => {
         if (e.target.value != "") {
