@@ -10,21 +10,25 @@
     <header class="top-bar">
         <h1>LogiX</h1>
         <p>Taka logomocja, tylko że z bobrem 🦫</p>
+        <button class="logo-tutorial" id="logo-tut">Zobacz spis komend!</button>
     </header>
     <main class="main-box">
         <div class="output-panel">
             <canvas class="logo-canvas" id="logo-main-screen"></canvas>
             <button class="logo-save" id="logo-save-img">Zapisz obrazek</button>
         </div>
+        <div class="history" id="history">
+
+        </div>
         <div class="input-panel">
             <input type="text" name="" id="logo-input" />
-            <input type="submit" id="logo-submit" value="Rusz bobrem" />
+            <input type="submit" id="logo-submit" class="logo-save" value="Rusz bobrem" />
         </div>
 
     </main>
     <div class="tooth tooth-one"></div>
     <div class="tooth tooth-two"></div>
-    <script type="module" src="/src/renderer.js"></script>
+    <script type="module" src="/src/terminal_renderer.js"></script>
     <footer>
         <p>
             Jeśli chcesz zobaczyć kod źródłowy kilknij tutaj:

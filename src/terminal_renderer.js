@@ -26,7 +26,7 @@
  * ```
  */
 
-import "./index.css";
+import "./terminal.css";
 import { initiateBeaver, loadInstructions, parseLogo } from "./logoController";
 import { DrawVisitor } from "./DrawVisitor";
 import loadBeaver from "./loadBeaver";
@@ -51,10 +51,6 @@ console.log(
         //Co ma się stać po zatwierdzeniu kodu
         parseLogo(textEditor.value, visitor);
     });
-
-    document.getElementById("clear-code").addEventListener("click", () => {
-        textEditor.value = "";
-    })
 
     select.addEventListener("change", (e) => {
         if (e.target.value != "") {

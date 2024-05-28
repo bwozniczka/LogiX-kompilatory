@@ -52,12 +52,8 @@ export class DrawVisitor extends LogiXVisitor {
     this.beaverHidden = false;
     this.context.save();
     this.procedures = new ProceduresDict();
-    document.getElementById("clear-code").addEventListener("click", () => {
-      document.getElementById("logo-code").value = "";
-    })
     document.getElementById("clear-canvas").addEventListener("click", () => {
-      this.clear()
-      this.context.save()
+      this.context.reset();
       this.currentX = context.canvas.width / 2;
       this.currentY = context.canvas.height / 2;
       this.currentDegree = 270;
