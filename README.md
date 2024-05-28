@@ -20,6 +20,9 @@ Interpreter do zmodyfikowanego logo z graficznym interfejsem w electronJS.
 |trojkat :liczba|Rysuje trójkąt równoboczny o zadanym boku|
 |kolo :liczba|Rysuje koło o zadanym promieniu|
 |ustaw :liczba :liczba| Ustawia znacznik na zadanych współrzędnych (X,Y)
+|napis :LITERAL_WYRAZU| Rysuje zadany teskt na ekranie
+|powtorz: 'powtorz' liczba blok| Powtarza zadane wyrażenie
+|deklaracjaProcedury: 'to' nazwa deklaracjeParametrow* EOL? (linia? EOL)+ 'end'| Pozwala zadeklarować procedure
 
 Poza tym mamy 10 testowych wiązanek zaimplementowanych metod gotowych do wklejenia oraz możliwość zapisania gotowego rysunku.
 
