@@ -1,6 +1,10 @@
 # LogiX
 
 Interpreter do zmodyfikowanego logo z graficznym interfejsem w electronJS.
+## Informacja o stosowanych generatorach skanerów/parserów, pakietach zewnętrznych:
+  - generator parserów: ANTLR
+  - język implementacji: JavaScript
+  - rodzaj translatora: interpreter 
 
 ### Co jest zaimplementowane
 
@@ -23,6 +27,7 @@ Interpreter do zmodyfikowanego logo z graficznym interfejsem w electronJS.
 |napis :LITERAL_WYRAZU| Rysuje zadany teskt na ekranie
 |powtorz: 'powtorz' liczba blok| Powtarza zadane wyrażenie
 |deklaracjaProcedury: 'to' nazwa deklaracjeParametrow* EOL? (linia? EOL)+ 'end'| Pozwala zadeklarować procedure
+|Jesli: 'jesli' porownanie blok| Funkcja warunkowa|
 
 Poza tym mamy 10 testowych wiązanek zaimplementowanych metod gotowych do wklejenia oraz możliwość zapisania gotowego rysunku.
 
@@ -40,7 +45,3 @@ npm start
 W razie błędu, może być jeszcze potrzeba usunąć package-lock.json i node_modules aby zainstalować paczki ponownie.
 
 Dobrej zabawy :D
-
-#### Pozostałe informacje
-
-Wkrótce zostaną zaimplementowane pętle i warunki, także proszę nie tracić wiary.
