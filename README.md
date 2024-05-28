@@ -33,7 +33,8 @@ Poza tym mamy 10 testowych wiązanek zaimplementowanych metod gotowych do wkleje
 
 ### Jak to wygląda?
 
-![mock](views/mock.jpg)
+![mock1](views/mock-nowy1.jpg)
+![mock2](views/mock-nowy2.jpg)
 
 ### Jak to uruchomić?
 
