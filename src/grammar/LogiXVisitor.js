@@ -78,12 +78,6 @@ export default class LogiXVisitor extends antlr4.tree.ParseTreeVisitor {
 	}
 
 
-	// Visit a parse tree produced by LogiXParser#zrob.
-	visitZrob(ctx) {
-	  return this.visitChildren(ctx);
-	}
-
-
 	// Visit a parse tree produced by LogiXParser#wypisz_.
 	visitWypisz_(ctx) {
 	  return this.visitChildren(ctx);
@@ -188,12 +182,6 @@ export default class LogiXVisitor extends antlr4.tree.ParseTreeVisitor {
 
 	// Visit a parse tree produced by LogiXParser#dom.
 	visitDom(ctx) {
-	  return this.visitChildren(ctx);
-	}
-
-
-	// Visit a parse tree produced by LogiXParser#ubop.
-	visitUbop(ctx) {
 	  return this.visitChildren(ctx);
 	}
 

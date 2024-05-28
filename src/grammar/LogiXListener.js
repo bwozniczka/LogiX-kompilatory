@@ -113,15 +113,6 @@ export default class LogiXListener extends antlr4.tree.ParseTreeListener {
 	}
 
 
-	// Enter a parse tree produced by LogiXParser#zrob.
-	enterZrob(ctx) {
-	}
-
-	// Exit a parse tree produced by LogiXParser#zrob.
-	exitZrob(ctx) {
-	}
-
-
 	// Enter a parse tree produced by LogiXParser#wypisz_.
 	enterWypisz_(ctx) {
 	}
@@ -281,15 +272,6 @@ export default class LogiXListener extends antlr4.tree.ParseTreeListener {
 
 	// Exit a parse tree produced by LogiXParser#dom.
 	exitDom(ctx) {
-	}
-
-
-	// Enter a parse tree produced by LogiXParser#ubop.
-	enterUbop(ctx) {
-	}
-
-	// Exit a parse tree produced by LogiXParser#ubop.
-	exitUbop(ctx) {
 	}
 
 

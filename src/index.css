@@ -29,7 +29,7 @@ body {
   box-shadow: #181818 0 0 5px 5px;
 }
 
-.top-bar > p {
+.top-bar>p {
   font-size: 1.6rem;
 }
 
@@ -62,7 +62,7 @@ body {
   margin-top: 10px;
   color: #e4c59e;
   background-color: #803d3b;
-  padding: 5px 0;
+  padding: 5px 20px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
@@ -119,12 +119,16 @@ body {
 
 footer {
   justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
   padding: 10px;
   background-color: #af8260;
   text-align: center;
-  margin-top: 250px;
+  margin-top: 20px;
   color: #dac3a7;
 }
+
 .custom-link:link {
   text-decoration: solid;
 }
@@ -135,6 +139,13 @@ footer {
 
 .custom-link:hover {
   color: #814644;
+}
+
+.button-panel {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
 }
 
 a,
@@ -161,6 +172,7 @@ th {
   text-align: left;
   padding: 16px;
 }
+
 td {
   text-align: left;
   padding: 16px;
@@ -185,6 +197,7 @@ tr:nth-child(even) {
   cursor: pointer;
   font-size: 1rem;
 }
+
 .logo-exit {
   margin-top: 10px;
   margin-bottom: 5px;

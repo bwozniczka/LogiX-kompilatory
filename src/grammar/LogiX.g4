@@ -22,10 +22,8 @@ polecenia:
 	| dom // cofnij do punktu 0 0
 	| napis
 	| ustaw // ustaw pozycję x y
-	| zrob //? 
 	| wywolanieProcedury
 	| jesli //?
-	| ubop //? do wyrzucenia
 	| dla //?
 	| kwadrat //tworzy kwadrat o podanym boku
 	| trojkat //tworzy trojkat rownoboczny o podanym boku
@@ -48,9 +46,7 @@ jesli: 'jesli' porownanie blok;
 
 porownanie: wyrazenie operatorPorownania wyrazenie;
 
-operatorPorownania: '<' | '>' | '=';
-
-zrob: 'zrob' LITERAL_WYRAZU wartosc;
+operatorPorownania: '<' | '>' | '=' | '<=' | '>=';
 
 wypisz_: 'wypisz' (wartosc | lancuchZnakowy);
 
@@ -90,15 +86,13 @@ ub: 'ub' | 'ukazbobra';
 
 dom: 'dom';
 
-ubop: 'ubop';
-
 napis: 'napis' LITERAL_WYRAZU;
 
 ustaw: 'ustaw' wyrazenie wyrazenie;
 
 losowo: 'losowo' wyrazenie;
 
-dla: 'for' '[' nazwa wyrazenie wyrazenie wyrazenie ']' blok;
+dla: 'dla' '[' nazwa wyrazenie wyrazenie wyrazenie ']' blok;
 
 kwadrat: 'kwadrat' wyrazenie;
 

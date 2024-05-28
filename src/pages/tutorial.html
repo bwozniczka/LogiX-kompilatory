@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>LogiX</title>
+  <link rel="stylesheet" href="../index.css" />
+  <button class="logo-exit" id="logo-ex">Powrót</button>
+</head>
+
+<body>
+  <table>
+    <tr>
+      <th>Nazwa komendy</th>
+      <th>Opis</th>
+    </tr>
+    <tr>
+      <td>np :liczba</td>
+      <td>Naprzód - Pozwala na przejście znacznikiem naprzód</td>
+    </tr>
+    <tr>
+      <td>pw :liczba</td>
+      <td>Prawo - Pozwala na rotację w prawo o zadaną ilość stopni</td>
+    </tr>
+    <tr>
+      <td>lw :liczba</td>
+      <td>Lewo - Pozwala na rotację w lewo o zadaną ilość stopni</td>
+    </tr>
+    <tr>
+      <td>ws :liczba</td>
+      <td>Wstecz - Pozwala na przejście znacznikiem wstecz</td>
+    </tr>
+    <tr>
+      <td>pb</td>
+      <td>Podnieś bobra - Pozwala podnieść pisak</td>
+    </tr>
+    <tr>
+      <td>ob</td>
+      <td>Opuść bobra - Pozwala opuścić pisak</td>
+    </tr>
+    <tr>
+      <td>dom</td>
+      <td>Dom - Pozwala cofnąć znacznik do punktu 0, 0</td>
+    </tr>
+    <tr>
+      <td>sb</td>
+      <td>Showaj bobra - Pozwala schować znacznik</td>
+    </tr>
+    <tr>
+      <td>ub</td>
+      <td>Upusc bobra - Pozwala pokazać znacznik</td>
+    </tr>
+    <tr>
+      <td>wy</td>
+      <td>Wyczysc - Czyści obszar roboczy</td>
+    </tr>
+    <tr>
+      <td>kwadrat :liczba</td>
+      <td>Kwadrat - Rysuje kwadrat o zadanym boku</td>
+    </tr>
+    <tr>
+      <td>trojkat :liczba</td>
+      <td>Trojkat - Rysuje trójkąt równoboczny o zadanym boku</td>
+    </tr>
+    <tr>
+      <td>kolo :liczba</td>
+      <td>Kolo - Rysuje koło o zadanym promieniu</td>
+    </tr>
+    <tr>
+      <td>ustaw :liczba :liczba</td>
+      <td>Ustaw - Ustawia znacznik na zadanych współrzędnych (X,Y)</td>
+    </tr>
+    <tr>
+      <td>napis :LITERAL_WYRAZU</td>
+      <td>Rysuje zadany tekst na ekranie</td>
+    </tr>
+    <tr>
+      <td>powtorz: 'powtorz' liczba blok</td>
+      <td>Powtarza zadane wyrażenie</td>
+    </tr>
+    <tr>
+      <td>
+        deklaracjaProcedury: 'to' nazwa deklaracjeParametrow* EOL? (linia?
+        EOL)+ 'end'
+      </td>
+      <td>Pozwala zadeklarować procedurę oraz parametry</td>
+    </tr>
+  </table>
+  <script>
+    const exit = document.getElementById("logo-ex");
+    exit.addEventListener("click", () => {
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+
+</html>
