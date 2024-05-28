@@ -1,6 +1,9 @@
 # LogiX
 
-Interpreter do zmodyfikowanego logo z graficznym interfejsem w electronJS.
+Interpreter do zmodyfikowanego języka [Logo](https://el.media.mit.edu/logo-foundation/what_is_logo/logo_programming.html) z graficznym interfejsem w electronJS. Wszystkie polecenia zostały zamienione na język Polski.
+  - [Gramatyka](https://github.com/bwozniczka/LogiX-kompilatory/blob/main/src/grammar/LogiX.g4)
+  - [Tokeny](https://github.com/bwozniczka/LogiX-kompilatory/blob/main/src/grammar/LogiXLexer.tokens)
+
 ## Informacja o stosowanych generatorach skanerów/parserów, pakietach zewnętrznych:
   - generator parserów: ANTLR
   - język implementacji: JavaScript
@@ -35,6 +38,7 @@ Poza tym mamy 10 testowych wiązanek zaimplementowanych metod gotowych do wkleje
 
 ![mock1](views/mock-nowy1.jpg)
 ![mock2](views/mock-nowy2.jpg)
+![mocl3](views/mock-nowy3.jpg)
 
 ### Jak to uruchomić?
 
