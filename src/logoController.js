@@ -15,11 +15,13 @@ export const initiateBeaver = (logoScreen, beaver) => {
   logoScreen.restore();
 };
 
-export const moveBeaver = (beaver, ctx, x, y, deg) => {
+export const moveBeaver = (beaver, ctx, x, y, deg, hidden) => {
   ctx.save(); //Zapisanie stanu sprzed narysowania bobra i transformacji
   ctx.translate(x, y); //Przeniesienie bobra w dobre miejsce
   ctx.rotate((deg * Math.PI) / 180); //Rotacja o określony kąt
-  ctx.drawImage(beaver, -15, -15, 30, 30); //Narysowanie bobra
+  if (!hidden) {
+    ctx.drawImage(beaver, -15, -15, 30, 30); //Narysowanie bobra
+  }
   ctx.restore(); //Odzyskanie linii przejścia na obrazku
 };
 
