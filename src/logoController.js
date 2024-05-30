@@ -38,6 +38,10 @@ export const parseLogo = (input, visitor) => {
   visitor.visit(tree);
 };
 
+export const getParserTree = (input) => {
+  const chars = new antlr4.InputStream(input);
+}
+
 export const loadInstructions = (name, target) => {
   target.value = testCodes[name];
 };
