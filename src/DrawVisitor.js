@@ -391,6 +391,7 @@ export class DrawVisitor extends LogiXVisitor {
       this.visit(blok);
     }
   }
+
   visitPorownanie(ctx) {
     let left = this.getParam(ctx.wyrazenie()[0]);
     let operator = ctx.operatorPorownania().getText();
