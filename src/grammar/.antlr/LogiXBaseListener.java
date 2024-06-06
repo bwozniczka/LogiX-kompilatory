@@ -160,18 +160,6 @@ public class LogiXBaseListener implements LogiXListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterZrob(LogiXParser.ZrobContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitZrob(LogiXParser.ZrobContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterWypisz_(LogiXParser.Wypisz_Context ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -383,18 +371,6 @@ public class LogiXBaseListener implements LogiXListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitDom(LogiXParser.DomContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterUbop(LogiXParser.UbopContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitUbop(LogiXParser.UbopContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

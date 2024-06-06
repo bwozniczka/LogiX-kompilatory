@@ -51,8 +51,12 @@ console.log(
 
     starterButton.addEventListener("click", () => {
         //Co ma się stać po zatwierdzeniu kodu
-        parseLogo(textEditor.innerText, visitor);
+        parseLogo(textEditor, visitor);
     });
+
+    // textEditor.addEventListener("input", (e) => {
+    //     getParserTree(e.target.innerText);
+    // })
 
     document.getElementById("clear-code").addEventListener("click", () => {
         textEditor.value = "";

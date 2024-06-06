@@ -53,6 +53,7 @@ export class DrawVisitor extends LogiXVisitor {
     this.beaverHidden = false;
     this.context.save();
     this.procedures = new ProceduresDict();
+    this.shownValues = [];
 
     document.getElementById("clear-canvas").addEventListener("click", () => {
       this.context.reset();
@@ -81,6 +82,24 @@ export class DrawVisitor extends LogiXVisitor {
           text = text.replace(param, this.procedures.getCachedParam(param));
         });
       return eval(text);
+    } else if (new RegExp("^[A-Za-z]").test(paramText)) {
+      try {
+        let output = this.visit(ctx);
+        console.log(output);
+        //finding value
+        while (Array.isArray(output)) {
+          output = output[0];
+        }
+        if (typeof output === 'string') {
+          return output
+        } else {
+          return eval(output)
+        }
+
+      } catch (e) {
+        console.log(e);
+        return paramText
+      }
     } else {
       try {
         return eval(paramText);
@@ -116,6 +135,7 @@ export class DrawVisitor extends LogiXVisitor {
     this.context.restore(); // Wczytanie wszystkiego co było przed bobrem (ścieżki)
 
     let distance = this.getParam(ctx.wyrazenie(0)); // Pobranie danych z polecenia
+    console.log(distance)
     let [x, y] = [
       Math.cos(degreesToRadians(this.currentDegree)) * distance,
       Math.sin(degreesToRadians(this.currentDegree)) * distance,
@@ -377,10 +397,15 @@ export class DrawVisitor extends LogiXVisitor {
 
   visitWywolanieProcedury(ctx) {
     let nazwa = ctx.nazwa().getText();
-    let polecenia = this.procedures.dict[nazwa].procedure;
-    let args = ctx.wyrazenie().map((el) => parseInt(el.getText()));
-    this.procedures.updateCache(nazwa, args);
-    this.visit(polecenia);
+    if (nazwa in this.procedures.dict) {
+      let polecenia = this.procedures.dict[nazwa].procedure;
+      let args = ctx.wyrazenie().map((el) => parseInt(el.getText()));
+      this.procedures.updateCache(nazwa, args);
+      this.visit(polecenia);
+    } else {
+      console.log("nie ma takiej procedury")
+    }
+
   }
 
   visitJesli(ctx) {
@@ -409,6 +434,75 @@ export class DrawVisitor extends LogiXVisitor {
       case ">=":
         return left >= right;
     }
+  }
+
+  visitLosowo(ctx) {
+    console.log("losowo")
+    let val = this.getParam(ctx.wyrazenie(0));
+    if (typeof val !== 'number') {
+      console.error('Parameter for losowo must be a number');
+      return 0; // default fallback value
+    }
+    console.log(`Randomizing with value: ${val}`);
+    return Math.floor(Math.random() * val).toString();
+  }
+
+  visitWypisz_(ctx) {
+    let val = this.getParam(ctx.wartosc(0));
+    this.context.font = "15px Arial"
+    this.shownValues.push(val.toString());
+    this.context.strokeText(val.toString(), 10, (25 * (this.shownValues.length)));
+  }
+
+  visitPierwszy(ctx) {
+    let val = JSON.parse(ctx.lista(0).getText());
+    return val[0];
+  }
+
+  visitGlowa(ctx) {
+    let val = JSON.parse(ctx.lista(0).getText());
+    return '[' + val.slice(0, val.length - 1).join(', ') + ']';
+  }
+
+  visitOgon(ctx) {
+    let val = JSON.parse(ctx.lista(0).getText());
+    return '[' + val.slice(1).join(', ') + ']';
+  }
+
+  visitOstatni(ctx) {
+    let val = JSON.parse(ctx.lista(0).getText());
+    return val[val.length - 1];
+  }
+
+  visitElement(ctx) {
+    let index = parseInt(ctx.liczba(0).getText());
+    let val = JSON.parse(ctx.lista(0).getText());
+    return val[index];
+  }
+
+  visitElementWielowymiaru(ctx) {
+    let indexes = JSON.parse(ctx.lista(0).getText());
+    let val = JSON.parse(ctx.mdlista(0).getText());
+    indexes.forEach(idx => {
+      val = val[idx];
+    })
+    return val;
+  }
+
+  visitWybierz(ctx) {
+    let val = JSON.parse(ctx.lista(0).getText());
+    return val[Math.floor(Math.random() * val.length)];
+  }
+
+  visitUnikalna(ctx) {
+    let val = JSON.parse(ctx.lista(0).getText());
+    return '[' + [...new Set(val)].join(', ') + ']';
+  }
+
+  visitUsun(ctx) {
+    let removable = this.getParam(ctx.wartosc(0));
+    let val = JSON.parse(ctx.lista(0).getText());
+    return '[' + val.filter(el => el != removable).join(', ') + ']';
   }
 }
 
