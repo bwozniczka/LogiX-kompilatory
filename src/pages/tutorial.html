@@ -1,92 +1,138 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>LogiX</title>
-    <link rel="stylesheet" href="../index.css" />
-    <button class="logo-exit" id="logo-ex">Powrót</button>
-  </head>
 
-  <body>
-    <table>
-      <tr>
-        <th>Nazwa komendy</th>
-        <th>Opis</th>
-      </tr>
-      <tr>
-        <td>np :liczba</td>
-        <td>Naprzód - Pozwala na przejście znacznikiem naprzód</td>
-      </tr>
-      <tr>
-        <td>pw :liczba</td>
-        <td>Prawo - Pozwala na rotację w prawo o zadaną ilość stopni</td>
-      </tr>
-      <tr>
-        <td>lw :liczba</td>
-        <td>Lewo - Pozwala na rotację w lewo o zadaną ilość stopni</td>
-      </tr>
-      <tr>
-        <td>ws :liczba</td>
-        <td>Wstecz - Pozwala na przejście znacznikiem wstecz</td>
-      </tr>
-      <tr>
-        <td>pb</td>
-        <td>Podnieś bobra - Pozwala podnieść pisak</td>
-      </tr>
-      <tr>
-        <td>ob</td>
-        <td>Opuść bobra - Pozwala opuścić pisak</td>
-      </tr>
-      <tr>
-        <td>dom</td>
-        <td>Dom - Pozwala cofnąć znacznik do punktu 0, 0</td>
-      </tr>
-      <tr>
-        <td>sb</td>
-        <td>Showaj bobra - Pozwala schować znacznik</td>
-      </tr>
-      <tr>
-        <td>ub</td>
-        <td>Upusc bobra - Pozwala pokazać znacznik</td>
-      </tr>
-      <tr>
-        <td>wy</td>
-        <td>Wyczysc - Czyści obszar roboczy</td>
-      </tr>
-      <tr>
-        <td>kwadrat :liczba</td>
-        <td>Kwadrat - Rysuje kwadrat o zadanym boku</td>
-      </tr>
-      <tr>
-        <td>trojkat :liczba</td>
-        <td>Trojkat - Rysuje trójkąt równoboczny o zadanym boku</td>
-      </tr>
-      <tr>
-        <td>kolo :liczba</td>
-        <td>Kolo - Rysuje koło o zadanym promieniu</td>
-      </tr>
-      <tr>
-        <td>ustaw :liczba :liczba</td>
-        <td>Ustaw - Ustawia znacznik na zadanych współrzędnych (X,Y)</td>
-      </tr>
-      <tr>
-        <td>napis :LITERAL_WYRAZU</td>
-        <td>Rysuje zadany tekst na ekranie</td>
-      </tr>
-      <tr>
-        <td>powtorz liczba [polecenie]</td>
-        <td>Powtarza zadane wyrażenie</td>
-      </tr>
-      <tr>
-        <td>to nazwa_procedury :zmienna :polecenia end</td>
-        <td>Pozwala zadeklarować procedurę oraz parametry</td>
-      </tr>
-    </table>
-    <script>
-      const exit = document.getElementById("logo-ex");
-      exit.addEventListener("click", () => {
-        window.location.href = "index.html";
-      });
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <title>LogiX</title>
+  <link rel="stylesheet" href="../index.css" />
+  <button class="logo-exit" id="logo-ex">Powrót</button>
+</head>
+
+<body>
+  <table>
+    <tr>
+      <th>Nazwa komendy</th>
+      <th>Opis</th>
+    </tr>
+    <tr>
+      <td>np :liczba</td>
+      <td>Naprzód - Pozwala na przejście znacznikiem naprzód</td>
+    </tr>
+    <tr>
+      <td>pw :liczba</td>
+      <td>Prawo - Pozwala na rotację w prawo o zadaną ilość stopni</td>
+    </tr>
+    <tr>
+      <td>lw :liczba</td>
+      <td>Lewo - Pozwala na rotację w lewo o zadaną ilość stopni</td>
+    </tr>
+    <tr>
+      <td>ws :liczba</td>
+      <td>Wstecz - Pozwala na przejście znacznikiem wstecz</td>
+    </tr>
+    <tr>
+      <td>pb</td>
+      <td>Podnieś bobra - Pozwala podnieść pisak</td>
+    </tr>
+    <tr>
+      <td>ob</td>
+      <td>Opuść bobra - Pozwala opuścić pisak</td>
+    </tr>
+    <tr>
+      <td>dom</td>
+      <td>Dom - Pozwala cofnąć znacznik do punktu 0, 0</td>
+    </tr>
+    <tr>
+      <td>sb</td>
+      <td>Showaj bobra - Pozwala schować znacznik</td>
+    </tr>
+    <tr>
+      <td>ub</td>
+      <td>Upusc bobra - Pozwala pokazać znacznik</td>
+    </tr>
+    <tr>
+      <td>wy</td>
+      <td>Wyczysc - Czyści obszar roboczy</td>
+    </tr>
+    <tr>
+      <td>kwadrat :liczba</td>
+      <td>Kwadrat - Rysuje kwadrat o zadanym boku</td>
+    </tr>
+    <tr>
+      <td>trojkat :liczba</td>
+      <td>Trojkat - Rysuje trójkąt równoboczny o zadanym boku</td>
+    </tr>
+    <tr>
+      <td>kolo :liczba</td>
+      <td>Kolo - Rysuje koło o zadanym promieniu</td>
+    </tr>
+    <tr>
+      <td>ustaw :liczba :liczba</td>
+      <td>Ustaw - Ustawia znacznik na zadanych współrzędnych (X,Y)</td>
+    </tr>
+    <tr>
+      <td>napis :LITERAL_WYRAZU</td>
+      <td>Rysuje zadany tekst na ekranie</td>
+    </tr>
+    <tr>
+      <td>powtorz liczba [polecenie]</td>
+      <td>Powtarza zadane wyrażenie</td>
+    </tr>
+    <tr>
+      <td>to nazwa_procedury :zmienna :polecenia end</td>
+      <td>Pozwala zadeklarować procedurę oraz parametry</td>
+    </tr>
+    <tr>
+      <td>wypisz [wartość]</td>
+      <td>Pozwala wypisać wartość liczbową, tekstową lub zwrot z funkcji</td>
+    </tr>
+    <tr>
+      <td>losowo [liczba]</td>
+      <td>Zwraca losową liczbę z zakresu 0 - liczba.</td>
+    </tr>
+    <tr>
+      <td>pierwszy [lista]</td>
+      <td>Zwraca pierwszy element z listy.</td>
+    </tr>
+    <tr>
+      <td>glowa [lista]</td>
+      <td>Zwraca wszystkie elementy z listy poza ostatnim.</td>
+    </tr>
+    <tr>
+      <td>ogon [lista]</td>
+      <td>Zwraca wszystkie elementy z listy poza pierwszym.</td>
+    </tr>
+    <tr>
+      <td>ostatni [lista]</td>
+      <td>Zwraca ostatni element listy.</td>
+    </tr>
+    <tr>
+      <td>element [indeks] [lista]</td>
+      <td>Zwraca element listy o podanym indeksie.</td>
+    </tr>
+    <tr>
+      <td>elementww [lista] [wielowymiarowa lista]</td>
+      <td>Zwraca element listy wielowymiarowej.</td>
+    </tr>
+    <tr>
+      <td>wybierz [lista]</td>
+      <td>Zwraca losowo wybrany element z listy.</td>
+    </tr>
+    <tr>
+      <td>usun [element] [lista]</td>
+      <td>Usuwa podany element z listy.</td>
+    </tr>
+    <tr>
+      <td>unikalna [lista]</td>
+      <td>Zwraca listę bez duplikatów.</td>
+    </tr>
+  </table>
+  <script>
+    const exit = document.getElementById("logo-ex");
+    exit.addEventListener("click", () => {
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+
 </html>

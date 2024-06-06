@@ -38,7 +38,6 @@ export const parseLogo = (input, visitor) => {
   const errorListener = new LogiXErrorListener(input);
   parser.removeErrorListeners(); // Usuń domyślnego listenera
   parser.addErrorListener(errorListener);
-  console.log(parser.ruleNames)
 
   const tree = parser.prog();
   console.log(tree);
@@ -77,7 +76,7 @@ export const parseLogo = (input, visitor) => {
 // }
 
 export const loadInstructions = (name, target) => {
-  target.value = testCodes[name];
+  target.innerText = testCodes[name];
 };
 
 export function saveCanvasAsImage(canvas) {

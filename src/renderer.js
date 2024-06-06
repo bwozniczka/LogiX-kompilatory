@@ -59,13 +59,13 @@ console.log(
     // })
 
     document.getElementById("clear-code").addEventListener("click", () => {
-        textEditor.value = "";
+        textEditor.innerHTML = "";
     })
 
     textEditor.addEventListener('keydown', function (event) {
         if (event.shiftKey && event.key === 'Enter') {
             event.preventDefault();
-            parseLogo(textEditor.value, visitor);
+            parseLogo(textEditor, visitor);
         }
     });
 

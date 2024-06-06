@@ -79,9 +79,10 @@ usun: 'usun' wartosc lista;
 
 unikalna: 'unikalna' lista;
 
-lista: '[' wartosc (',' wartosc)* ']';
+lista: '[' wartosc ((', ' | ',') wartosc)* ']';
 
-mdlista: '[' (mdlista | lista) ', ' (mdlista | lista)* ']';
+mdlista:
+	'[' (mdlista | lista) ((', ' | ',') (mdlista | lista))* ']';
 
 lancuchZnakowy: '[' (lancuchZnakowy | ~ ']')* ']';
 

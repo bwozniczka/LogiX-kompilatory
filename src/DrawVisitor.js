@@ -9,7 +9,7 @@ class ProceduresDict {
     this.select.addEventListener("change", (e) => {
       if (e.target.value != "") {
         let proc = this.dict[e.target.value];
-        document.getElementById("logo-code").value =
+        document.getElementById("logo-code").innerText =
           proc.procedure[0].start.getInputStream().strdata;
       }
     });

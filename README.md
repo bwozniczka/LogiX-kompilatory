@@ -31,6 +31,17 @@ Interpreter do zmodyfikowanego języka [Logo](https://el.media.mit.edu/logo-foun
 |powtorz: 'powtorz' liczba blok| Powtarza zadane wyrażenie
 |deklaracjaProcedury: 'to' nazwa deklaracjeParametrow* EOL? (linia? EOL)+ 'end'| Pozwala zadeklarować procedure
 |Jesli: 'jesli' porownanie blok| Funkcja warunkowa|
+|wypisz: 'wypisz' wartosc|Wypisuje wartość liczbową, tekstową lub zwrot z funkcji|
+|losowo: 'losowo' liczba|Zwraca losową liczbę z zakresu 0 - liczba|
+|pierwszy: 'pierwszy' lista|Zwraca pierwszy element z listy|
+|głowa: 'glowa' lista|Zwraca wszystkie elementy z listy poza ostatnim|
+|ogon: 'ogon' lista|Zwraca wszystkie elementy z lsity poza pierwszym|
+|ostatni: 'ostatni' lista|Zwraca ostatni element z listy|
+|element: 'element' indeks lista|Zwraca element listy z podanego indeksu|
+|elementWielowymiaru: 'elementww' lista listawielowymiarowa|Zwraca element z listy wielowymiarowej|
+|wybierz: 'wybierz' lista|Zwraca losowo wybrany element z listy|
+|usuń: 'usun' element lista|Zwraca listę bez podanego elementu|
+|unikalna: 'unikalna' lista|Zwraca podaną listę bez duplikatów|
 
 Poza tym mamy 10 testowych wiązanek zaimplementowanych metod gotowych do wklejenia oraz możliwość zapisania gotowego rysunku.
 
