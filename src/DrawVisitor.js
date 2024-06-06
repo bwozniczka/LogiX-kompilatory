@@ -403,7 +403,13 @@ export class DrawVisitor extends LogiXVisitor {
       this.procedures.updateCache(nazwa, args);
       this.visit(polecenia);
     } else {
-      console.log("nie ma takiej procedury")
+      let errorListener = ctx.parser._listeners[0]
+      if (ctx.start.start == 0) {
+        errorListener.addCustomUnderline(ctx.start.start, nazwa);
+      }
+
+      errorListener.appendError(`Nie ma takiej procedury jak ${nazwa}`);
+      errorListener.showErrors();
     }
 
   }

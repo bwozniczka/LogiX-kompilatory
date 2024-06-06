@@ -38,12 +38,13 @@ export const parseLogo = (input, visitor) => {
   const errorListener = new LogiXErrorListener(input);
   parser.removeErrorListeners(); // Usuń domyślnego listenera
   parser.addErrorListener(errorListener);
+  console.log(parser);
 
   const tree = parser.prog();
   console.log(tree);
   console.log(tree.toStringTree(parser.ruleNames, parser));
   visitor.visit(tree);
-  errorListener.applyChanges()
+  errorListener.applyChanges();
 };
 
 // export const getParserTree = (input) => {

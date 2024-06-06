@@ -21,6 +21,7 @@ export class LogiXErrorListener extends antlr4.error.ErrorListener {
         let position = lines.slice(0, line - 1).map(el => el.length).reduce((acc, val) => (acc + val), 0) + (line - 1) + charPositionInLine
         this.errors.push({ value: mismatched, position: position });
         this.appendError(`Błąd składniowy w linii ${line}, kolumna ${charPositionInLine}: ${msg}`);
+        console.log(this.errors)
     }
 
     applyChanges() {
@@ -43,6 +44,12 @@ export class LogiXErrorListener extends antlr4.error.ErrorListener {
         newError.className = "single-error-message";
         newError.innerText = msg;
         this.errorBox.appendChild(newError)
+    }
+
+    addCustomUnderline(start, el) {
+        console.log(start)
+        this.errors.push({ value: el, position: start });
+        console.log(this.errors);
     }
 
     showErrors() {
