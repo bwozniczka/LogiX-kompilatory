@@ -43,7 +43,8 @@ Interpreter do zmodyfikowanego języka [Logo](https://el.media.mit.edu/logo-foun
 |usuń: 'usun' element lista|Zwraca listę bez podanego elementu|
 |unikalna: 'unikalna' lista|Zwraca podaną listę bez duplikatów|
 
-Poza tym mamy 10 testowych wiązanek zaimplementowanych metod gotowych do wklejenia oraz możliwość zapisania gotowego rysunku.
+### W naszej aplikacji są zaimplementowane testowowe wiązanki metod gotowych do wklejenia oraz możliwość zapisania gotowego rysunku.
+
 
 ### Jak to wygląda?
 
