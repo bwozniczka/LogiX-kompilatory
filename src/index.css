@@ -49,6 +49,16 @@ body {
   padding: 10px;
 }
 
+.code-editor {
+  width: 400px;
+  height: 300px;
+  overflow-y: auto;
+  background-color: #e4c59e;
+  border-radius: 10px;
+  border: 2px solid #814644;
+  padding: 2px;
+}
+
 .output-panel {
   display: flex;
   flex-direction: column;
@@ -205,4 +215,32 @@ tr:nth-child(even) {
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
+}
+
+.syntax-error {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: red;
+}
+
+.errors-display {
+  margin-top: 10px;
+  color: white;
+  width: 400px;
+  height: 100px;
+  overflow-y: auto;
+  background-color: #ff353555;
+  border-radius: 10px;
+  border: 2px solid #ff3535;
+  padding: 5px;
+  display: none;
+  flex-direction: column;
+}
+
+.single-error-message {
+  margin: 5px;
+  background-color: #ff353577;
+  color: white;
+  border-radius: 5px;
+  padding: 2px;
 }

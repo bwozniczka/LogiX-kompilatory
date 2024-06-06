@@ -122,6 +122,105 @@ export default class LogiXListener extends antlr4.tree.ParseTreeListener {
 	}
 
 
+	// Enter a parse tree produced by LogiXParser#pierwszy.
+	enterPierwszy(ctx) {
+	}
+
+	// Exit a parse tree produced by LogiXParser#pierwszy.
+	exitPierwszy(ctx) {
+	}
+
+
+	// Enter a parse tree produced by LogiXParser#glowa.
+	enterGlowa(ctx) {
+	}
+
+	// Exit a parse tree produced by LogiXParser#glowa.
+	exitGlowa(ctx) {
+	}
+
+
+	// Enter a parse tree produced by LogiXParser#ogon.
+	enterOgon(ctx) {
+	}
+
+	// Exit a parse tree produced by LogiXParser#ogon.
+	exitOgon(ctx) {
+	}
+
+
+	// Enter a parse tree produced by LogiXParser#ostatni.
+	enterOstatni(ctx) {
+	}
+
+	// Exit a parse tree produced by LogiXParser#ostatni.
+	exitOstatni(ctx) {
+	}
+
+
+	// Enter a parse tree produced by LogiXParser#element.
+	enterElement(ctx) {
+	}
+
+	// Exit a parse tree produced by LogiXParser#element.
+	exitElement(ctx) {
+	}
+
+
+	// Enter a parse tree produced by LogiXParser#elementWielowymiaru.
+	enterElementWielowymiaru(ctx) {
+	}
+
+	// Exit a parse tree produced by LogiXParser#elementWielowymiaru.
+	exitElementWielowymiaru(ctx) {
+	}
+
+
+	// Enter a parse tree produced by LogiXParser#wybierz.
+	enterWybierz(ctx) {
+	}
+
+	// Exit a parse tree produced by LogiXParser#wybierz.
+	exitWybierz(ctx) {
+	}
+
+
+	// Enter a parse tree produced by LogiXParser#usun.
+	enterUsun(ctx) {
+	}
+
+	// Exit a parse tree produced by LogiXParser#usun.
+	exitUsun(ctx) {
+	}
+
+
+	// Enter a parse tree produced by LogiXParser#unikalna.
+	enterUnikalna(ctx) {
+	}
+
+	// Exit a parse tree produced by LogiXParser#unikalna.
+	exitUnikalna(ctx) {
+	}
+
+
+	// Enter a parse tree produced by LogiXParser#lista.
+	enterLista(ctx) {
+	}
+
+	// Exit a parse tree produced by LogiXParser#lista.
+	exitLista(ctx) {
+	}
+
+
+	// Enter a parse tree produced by LogiXParser#mdlista.
+	enterMdlista(ctx) {
+	}
+
+	// Exit a parse tree produced by LogiXParser#mdlista.
+	exitMdlista(ctx) {
+	}
+
+
 	// Enter a parse tree produced by LogiXParser#lancuchZnakowy.
 	enterLancuchZnakowy(ctx) {
 	}

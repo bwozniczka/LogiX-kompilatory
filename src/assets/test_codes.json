@@ -8,5 +8,6 @@
   "test7": "np 100 pw 90 np 100 pw 90 np 250 lw 90 np 100 dom",
   "test8": "ustaw -160 -70\npowtorz 8 [ pw 45 powtorz 6[powtorz 90[np 4 pw 2] pw 90]]\ndom",
   "test9": "pb ws 50 pw 90 ws 25 ob np 50 lw 90 np 100 lw 90 np 50 lw 90 np 50 lw 90 np 50 dom",
-  "test10": "pb ws 100 lw 90 ob np 100 pw 90 np 200 pw 90 np 200 pw 90 np 200 pw 90 np 100 pb ws 75 pw 90 ob np 100 lw 90 np 50 lw 90 np 100 pb dom lw 90 np 80 pw 90 np 80 ob kwadrat 80 pb ws 80 pw 90 np 40 lw 90 ob np 80 pb ws 40 lw 90 ws 40 ob np 80 dom pb lw 90 np 100 pw 90 np 100 pw 60 ws 30 ob np 145 pw 60 np 145 dom"
+  "test10": "pb ws 100 lw 90 ob np 100 pw 90 np 200 pw 90 np 200 pw 90 np 200 pw 90 np 100 pb ws 75 pw 90 ob np 100 lw 90 np 50 lw 90 np 100 pb dom lw 90 np 80 pw 90 np 80 ob kwadrat 80 pb ws 80 pw 90 np 40 lw 90 ob np 80 pb ws 40 lw 90 ws 40 ob np 80 dom pb lw 90 np 100 pw 90 np 100 pw 60 ws 30 ob np 145 pw 60 np 145 dom",
+  "test11": "wypisz losowo 100\nwypisz pierwszy [1, 2, 3, 4, 5]\nwypisz glowa [1, 2, 3, 4, 5]\nwypisz ogon [1, 2, 3, 4, 5]\nwypisz ostatni [1, 2, 3, 4, 5]\nwypisz element 2 [\"a\", \"b\", \"c\"]\nwypisz elementww [0, 1] [[4, 5, 6], [7, 8, 9]]\nwypisz wybierz [\"a\", \"b\", \"cde\"]\nwypisz wybierz [\"a\", \"g\", \"h\"]\nwypisz usun 2 [1, 2, 3, 4]\nwypisz unikalna [5, 1, 2, 3, 4, 4, 4, 5, 5]"
 }

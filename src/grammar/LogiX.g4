@@ -36,7 +36,18 @@ deklaracjaProcedury:
 
 deklaracjeParametrow: ':' nazwa (',' deklaracjeParametrow)*;
 
-func_: 'losowo';
+func_: (
+		losowo
+		| pierwszy
+		| glowa
+		| ogon
+		| ostatni
+		| element
+		| elementWielowymiaru
+		| wybierz
+		| usun
+		| unikalna
+	);
 
 powtorz: 'powtorz' liczba blok;
 
@@ -49,6 +60,29 @@ porownanie: wyrazenie operatorPorownania wyrazenie;
 operatorPorownania: '<' | '>' | '=' | '<=' | '>=';
 
 wypisz_: 'wypisz' (wartosc | lancuchZnakowy);
+
+pierwszy: 'pierwszy' lista;
+
+glowa: 'glowa' lista;
+
+ogon: 'ogon' lista;
+
+ostatni: 'ostatni' lista;
+
+element: 'element' liczba lista;
+
+elementWielowymiaru: 'elementww' lista mdlista;
+
+wybierz: 'wybierz' lista;
+
+usun: 'usun' wartosc lista;
+
+unikalna: 'unikalna' lista;
+
+lista: '[' wartosc ((', ' | ',') wartosc)* ']';
+
+mdlista:
+	'[' (mdlista | lista) ((', ' | ',') (mdlista | lista))* ']';
 
 lancuchZnakowy: '[' (lancuchZnakowy | ~ ']')* ']';
 

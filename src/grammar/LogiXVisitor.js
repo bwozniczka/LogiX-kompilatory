@@ -84,6 +84,72 @@ export default class LogiXVisitor extends antlr4.tree.ParseTreeVisitor {
 	}
 
 
+	// Visit a parse tree produced by LogiXParser#pierwszy.
+	visitPierwszy(ctx) {
+	  return this.visitChildren(ctx);
+	}
+
+
+	// Visit a parse tree produced by LogiXParser#glowa.
+	visitGlowa(ctx) {
+	  return this.visitChildren(ctx);
+	}
+
+
+	// Visit a parse tree produced by LogiXParser#ogon.
+	visitOgon(ctx) {
+	  return this.visitChildren(ctx);
+	}
+
+
+	// Visit a parse tree produced by LogiXParser#ostatni.
+	visitOstatni(ctx) {
+	  return this.visitChildren(ctx);
+	}
+
+
+	// Visit a parse tree produced by LogiXParser#element.
+	visitElement(ctx) {
+	  return this.visitChildren(ctx);
+	}
+
+
+	// Visit a parse tree produced by LogiXParser#elementWielowymiaru.
+	visitElementWielowymiaru(ctx) {
+	  return this.visitChildren(ctx);
+	}
+
+
+	// Visit a parse tree produced by LogiXParser#wybierz.
+	visitWybierz(ctx) {
+	  return this.visitChildren(ctx);
+	}
+
+
+	// Visit a parse tree produced by LogiXParser#usun.
+	visitUsun(ctx) {
+	  return this.visitChildren(ctx);
+	}
+
+
+	// Visit a parse tree produced by LogiXParser#unikalna.
+	visitUnikalna(ctx) {
+	  return this.visitChildren(ctx);
+	}
+
+
+	// Visit a parse tree produced by LogiXParser#lista.
+	visitLista(ctx) {
+	  return this.visitChildren(ctx);
+	}
+
+
+	// Visit a parse tree produced by LogiXParser#mdlista.
+	visitMdlista(ctx) {
+	  return this.visitChildren(ctx);
+	}
+
+
 	// Visit a parse tree produced by LogiXParser#lancuchZnakowy.
 	visitLancuchZnakowy(ctx) {
 	  return this.visitChildren(ctx);

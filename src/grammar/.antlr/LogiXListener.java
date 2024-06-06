@@ -127,16 +127,6 @@ public interface LogiXListener extends ParseTreeListener {
 	 */
 	void exitOperatorPorownania(LogiXParser.OperatorPorownaniaContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link LogiXParser#zrob}.
-	 * @param ctx the parse tree
-	 */
-	void enterZrob(LogiXParser.ZrobContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link LogiXParser#zrob}.
-	 * @param ctx the parse tree
-	 */
-	void exitZrob(LogiXParser.ZrobContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link LogiXParser#wypisz_}.
 	 * @param ctx the parse tree
 	 */
@@ -316,16 +306,6 @@ public interface LogiXListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitDom(LogiXParser.DomContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link LogiXParser#ubop}.
-	 * @param ctx the parse tree
-	 */
-	void enterUbop(LogiXParser.UbopContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link LogiXParser#ubop}.
-	 * @param ctx the parse tree
-	 */
-	void exitUbop(LogiXParser.UbopContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link LogiXParser#napis}.
 	 * @param ctx the parse tree
