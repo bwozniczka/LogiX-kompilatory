@@ -1,63 +1,72 @@
 # LogiX
 
-Interpreter do zmodyfikowanego języka [Logo](https://el.media.mit.edu/logo-foundation/what_is_logo/logo_programming.html) z graficznym interfejsem w electronJS. Wszystkie polecenia zostały zamienione na język Polski.
-  - [Gramatyka](https://github.com/bwozniczka/LogiX-kompilatory/blob/main/src/grammar/LogiX.g4)
-  - [Tokeny](https://github.com/bwozniczka/LogiX-kompilatory/blob/main/src/grammar/LogiXLexer.tokens)
+An interpreter for a modified version of the [Logo programming language](https://el.media.mit.edu/logo-foundation/what_is_logo/logo_programming.html), featuring a graphical interface built with ElectronJS. All commands have been translated into Polish.
 
-## Informacja o stosowanych generatorach skanerów/parserów, pakietach zewnętrznych:
-  - generator parserów: ANTLR
-  - język implementacji: JavaScript
-  - rodzaj translatora: interpreter 
+  - [Grammar](https://github.com/bwozniczka/LogiX-kompilatory/blob/main/src/grammar/LogiX.g4)
+  - [Tokens](https://github.com/bwozniczka/LogiX-kompilatory/blob/main/src/grammar/LogiXLexer.tokens)
 
-### Co jest zaimplementowane
+## Information about the scanner/parser generators and external packages used:
+  - Parser generator: ANTLR
+  - Implementation language: JavaScript
+  - Type of translator: Interpreter
 
-|Polecenie|Opis|
-|---------|----|
-|np :liczba|Pozwala na przejście znacznikiem naprzód|
-|pw :liczba|Pozwala na rotację w prawo o zadaną ilość stopni|
-|lw :liczba|Pozwala na rotację w lewo o zadaną ilość stopni|
-|ws :liczba|Pozwala na przejście znacznikiem wstecz|
-|pb|Pozwala podnieść pisak|
-|ob|Pozwala opuścić pisak|
-|dom|Pozwala cofnąć znacznik do punktu 0, 0|
-|sb|Pozwala schować znacznik|
-|ub|Pozwala pokazać znacznik|
-|wy|Czyści obszar roboczy|
-|kwadrat :liczba|Rysuje kwadrat o zadanym boku|
-|trojkat :liczba|Rysuje trójkąt równoboczny o zadanym boku|
-|kolo :liczba|Rysuje koło o zadanym promieniu|
-|ustaw :liczba :liczba| Ustawia znacznik na zadanych współrzędnych (X,Y)
-|napis :LITERAL_WYRAZU| Rysuje zadany teskt na ekranie
-|powtorz: 'powtorz' liczba blok| Powtarza zadane wyrażenie
-|deklaracjaProcedury: 'to' nazwa deklaracjeParametrow* EOL? (linia? EOL)+ 'end'| Pozwala zadeklarować procedure
-|Jesli: 'jesli' porownanie blok| Funkcja warunkowa|
-|wypisz: 'wypisz' wartosc|Wypisuje wartość liczbową, tekstową lub zwrot z funkcji|
-|losowo: 'losowo' liczba|Zwraca losową liczbę z zakresu 0 - liczba|
-|pierwszy: 'pierwszy' lista|Zwraca pierwszy element z listy|
-|głowa: 'glowa' lista|Zwraca wszystkie elementy z listy poza ostatnim|
-|ogon: 'ogon' lista|Zwraca wszystkie elementy z lsity poza pierwszym|
-|ostatni: 'ostatni' lista|Zwraca ostatni element z listy|
-|element: 'element' indeks lista|Zwraca element listy z podanego indeksu|
-|elementWielowymiaru: 'elementww' lista listawielowymiarowa|Zwraca element z listy wielowymiarowej|
-|wybierz: 'wybierz' lista|Zwraca losowo wybrany element z listy|
-|usuń: 'usun' element lista|Zwraca listę bez podanego elementu|
-|unikalna: 'unikalna' lista|Zwraca podaną listę bez duplikatów|
+### Implemented Commands
 
-Poza tym mamy 10 testowych wiązanek zaimplementowanych metod gotowych do wklejenia oraz możliwość zapisania gotowego rysunku.
+| Command                | Description                                                       |
+|------------------------|-------------------------------------------------------------------|
+| **np :number**          | Move the marker forward by a specified number of units            |
+| **pw :number**          | Rotate the marker right by a specified number of degrees          |
+| **lw :number**          | Rotate the marker left by a specified number of degrees           |
+| **ws :number**          | Move the marker backward by a specified number of units           |
+| **pb**                  | Lift the pen                                                     |
+| **ob**                  | Lower the pen                                                    |
+| **dom**                 | Return the marker to the origin (0, 0)                           |
+| **sb**                  | Hide the marker                                                  |
+| **ub**                  | Show the marker                                                  |
+| **wy**                  | Clear the workspace                                              |
+| **kwadrat :number**     | Draw a square with the specified side length                     |
+| **trojkat :number**     | Draw an equilateral triangle with the specified side length       |
+| **kolo :number**        | Draw a circle with the specified radius                          |
+| **ustaw :number :number** | Set the marker at specified coordinates (X, Y)                  |
+| **napis :TEXT_LITERAL** | Draw the specified text on the screen                            |
+| **powtorz: 'repeat' number block** | Repeat the given expression a specified number of times|
+| **procedure: 'to' name paramDeclarations* EOL? (line? EOL)+ 'end'** | Declare a custom procedure |
+| **Jesli: 'if' condition block** | Conditional function                                        |
+| **wypisz: 'print' value** | Print a numerical or text value, or return from a function        |
+| **losowo: 'random' number** | Return a random number between 0 and the specified value        |
+| **pierwszy: 'first' list** | Return the first element of a list                               |
+| **glowa: 'head' list** | Return all elements of a list except the last                     |
+| **ogon: 'tail' list** | Return all elements of a list except the first                     |
+| **ostatni: 'last' list** | Return the last element of a list                                 |
+| **element: 'element' index list** | Return the element from a list at the given index          |
+| **elementWielowymiaru: 'elementww' list multiDimensionalList** | Return an element from a multidimensional list|
+| **wybierz: 'choose' list** | Randomly select an element from a list                          |
+| **usun: 'remove' element list** | Return a list without the specified element                  |
+| **unikalna: 'unique' list** | Return the list without duplicates    
 
-### Jak to wygląda?
+***
+
+### Our application includes pre-built command sequences ready to paste, along with the option to save your finished drawing.
+
+***
+
+### Preview
 
 ![mock1](views/mock-nowy1.jpg)
 ![mock2](views/mock-nowy2.jpg)
-![mocl3](views/mock-nowy3.jpg)
+![mock3](views/mock-nowy3.jpg)
 
-### Jak to uruchomić?
+***
+### How to Run
 
 ```sh
 npm i
 npm start
 ```
+If you encounter any errors, you may need to delete `package-lock.json` and `node_modules`, then reinstall the packages.
 
-W razie błędu, może być jeszcze potrzeba usunąć package-lock.json i node_modules aby zainstalować paczki ponownie.
 
-Dobrej zabawy :D
+***
+### Have fun! :D
+
+

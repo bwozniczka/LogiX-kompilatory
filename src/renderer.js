@@ -44,6 +44,7 @@ console.log(
     const select = document.getElementById("sample-codes");
     const saveButton = document.getElementById("logo-save-img");
     const tutorialButton = document.getElementById("logo-tut");
+    const errorBox = document.querySelector(".errors-display");
     const canvasCtx = canvas.getContext("2d"); //Pobranie kontekstu 2d
     initiateBeaver(canvasCtx, beaver); //Inicjacja bobra w pozycji zerowej
     const visitor = new DrawVisitor(canvasCtx, beaver); //Stworzenie instancji customowego visitora
@@ -59,7 +60,10 @@ console.log(
     // })
 
     document.getElementById("clear-code").addEventListener("click", () => {
+        console.log("clear-code");
         textEditor.innerHTML = "";
+        errorBox.style.display = "none";
+        errorBox.innerHTML = "";
     })
 
     textEditor.addEventListener('keydown', function (event) {
@@ -72,6 +76,8 @@ console.log(
     select.addEventListener("change", (e) => {
         if (e.target.value != "") {
             loadInstructions(e.target.value, textEditor);
+            errorBox.style.display = "none";
+            errorBox.innerHTML = "";
         }
     });
 
